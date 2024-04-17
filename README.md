@@ -72,7 +72,7 @@ One Half Dark Edited
 Check Modules' path
 
 ```powershell
-Get-Module -ListAvailable -Name {Module Name} | Select-Object -Property  Path
+Get-Module -ListAvailable -Name {Module Name} | Select-Object -Property Path
 ```
 
 Profile
