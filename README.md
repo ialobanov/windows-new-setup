@@ -113,14 +113,17 @@ Function GitPush {
 ## Import-Module
 
 Import-Module -Name $env:ProgramFiles\powershell\7\Modules\PSReadLine\PSReadLine.psd1
+Import-Module -Name $env:USERPROFILE\Documents\PowerShell\Modules\z\1.1.13\z.psd1
+Import-Module -Name $env:USERPROFILE\Documents\PowerShell\Modules\Terminal-Icons\0.11.0\Terminal-Icons.psd1
+Import-Module -Name $env:USERPROFILE\Documents\PowerShell\Modules\posh-git\1.1.0\posh-git.psd1
+
+## Setup PSReadLineOption
+
 Set-PSReadLineOption -EditMode Emacs
 Set-PSReadLineOption -PredictionSource HistoryAndPlugin
 Set-PSReadlineKeyHandler -Chord 'Ctrl+d' -Function DeleteChar
 Set-PSReadLineKeyHandler -Chord 'Ctrl+f' -Function ForwardWord
 Set-PSReadLineKeyHandler -Chord 'Enter' -Function ValidateAndAcceptLine
-Import-Module -Name $env:USERPROFILE\Documents\PowerShell\Modules\z\1.1.13\z.psd1
-Import-Module -Name $env:USERPROFILE\Documents\PowerShell\Modules\Terminal-Icons\0.11.0\Terminal-Icons.psd1
-Import-Module -Name $env:USERPROFILE\Documents\PowerShell\Modules\posh-git\1.1.0\posh-git.psd1
 ```
 
 ## Install Apps
