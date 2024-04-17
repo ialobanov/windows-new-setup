@@ -12,7 +12,7 @@ Install PowerShell
 
 https://github.com/PowerShell/PowerShell/releases
 
-JetBrainsMono Nerd Fonts
+JetBrainsMono Nerd Font
 
 https://github.com/ryanoasis/nerd-fonts/releases
 
