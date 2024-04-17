@@ -143,7 +143,7 @@ if ($?) { winget install --id Google.Chrome -e --source winget };
 if ($?) { winget install --id Neovim.Neovim -e --source winget };
 ```
 
-Neovim
+Additional for Neovim
 
 ```powershell
 winget install --id zig.zig -e --source winget --scope user;
