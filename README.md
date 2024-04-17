@@ -6,6 +6,10 @@
 New-LocalUser -Name {'user name'}
 ```
 
+```powershell
+Add-LocalGroupMember -Group "Users" -Member "{user name}"
+```
+
 ## Install PowerShell and Nerd Fonts
 
 Install PowerShell
