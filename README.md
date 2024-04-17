@@ -94,19 +94,18 @@ Set-Alias -Name touch -Value New-Item
 ## Functions
 
 Function CleanTemp {
-  Remove-Item -Path $env:TEMP\* -Recurse -ErrorAction SilentlyContinue;
-  Remove-Item -Path C:\Windows\Temp\* -Recurse -ErrorAction  SilentlyContinue
+  Remove-Item -Path $env:TEMP\* -Recurse -ErrorAction SilentlyContinue
 }
-Function cleanrb {
-  Clear-RecycleBin
-}
-Function which ($command) {
+
+Function Which ($command) {
   Get-Command -Name $command -ErrorAction SilentlyContinue |
   Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
 }
+
 Function UpdateAll {
   winget.exe upgrade --source winget --recurse --verbose
 }
+
 Function GitPush {
   git.exe add .; if ($?) { git.exe commit -am "." }; if ($?) { git.exe push }; if ($?) { Clear-Host }
 }
