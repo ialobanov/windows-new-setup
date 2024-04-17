@@ -10,13 +10,13 @@ New-LocalUser -Name {'user name'}
 Add-LocalGroupMember -Group "Users" -Member "{user name}"
 ```
 
-## Install PowerShell and Nerd Fonts
+## Install PowerShell and Fonts
 
 Install PowerShell
 
 https://github.com/PowerShell/PowerShell/releases
 
-JetBrainsMono Nerd Font
+JetBrainsMono Nerd Fonts
 
 https://github.com/ryanoasis/nerd-fonts/releases
 
@@ -52,25 +52,33 @@ One Half Dark Edited
 },
 ```
 
-### Add Profile
-
-#### Types
-
-- Current User, Current Host - `$PROFILE`
-- Current User, Current Host - `$PROFILE.CurrentUserCurrentHost`
-- Current User, All Hosts - `$PROFILE.CurrentUserAllHosts`
-- All Users, Current Host - `$PROFILE.AllUsersCurrentHost`
-- All Users, All Hosts - `$PROFILE.AllUsersAllHosts`
-
-#### Create Profile
+## Install Apps
 
 ```powershell
-if (!(Test-Path -Path $PROFILE)) {
-  New-Item -ItemType File -Path $PROFILE -Force
-}
+notepad.exe .\WingetInstall.ps1
 ```
 
-#### Install PowerShell Modules
+```powershell
+winget install --id Git.Git -e --source winget;
+if ($?) { winget install --id Bitwarden.Bitwarden -e --source winget --scope user };
+if ($?) { winget install --id Telegram.TelegramDesktop -e --source winget --scope user };
+if ($?) { winget install --id Microsoft.VisualStudioCode -e --source winget --scope user };
+if ($?) { winget install --id Obsidian.Obsidian -e --source winget --scope user };
+if ($?) { winget install --id SlackTechnologies.Slack -e --source winget --scope user };
+if ($?) { winget install --id Skillbrains.Lightshot -e --source winget };
+if ($?) { winget install --id LibreWolf.LibreWolf -e --source winget };
+if ($?) { winget install --id Google.Chrome -e --source winget };
+if ($?) { winget install --id Neovim.Neovim -e --source winget };
+```
+
+Additional for Neovim
+
+```powershell
+winget install --id zig.zig -e --source winget --scope user;
+if ($?) { winget install --id -e BurntSushi.ripgrep.MSVC --source winget --scope user };
+```
+
+### Install PowerShell Modules
 
 ```powershell
 notepad.exe .\PowerShellInstallModules.ps1
@@ -87,6 +95,24 @@ if ($?) { Install-Module -Name Terminal-Icons -Scope CurrentUser };
 
 ```powershell
 Get-Module -ListAvailable -Name {Module Name} | Select-Object -Property Path
+```
+
+### Add Profile
+
+#### Types
+
+- Current User, Current Host - `$PROFILE`
+- Current User, Current Host - `$PROFILE.CurrentUserCurrentHost`
+- Current User, All Hosts - `$PROFILE.CurrentUserAllHosts`
+- All Users, Current Host - `$PROFILE.AllUsersCurrentHost`
+- All Users, All Hosts - `$PROFILE.AllUsersAllHosts`
+
+#### Create Profile
+
+```powershell
+if (!(Test-Path -Path $PROFILE)) {
+  New-Item -ItemType File -Path $PROFILE -Force
+}
 ```
 
 #### Edit Profile
@@ -138,32 +164,6 @@ Set-PSReadLineOption -PredictionSource HistoryAndPlugin
 Set-PSReadlineKeyHandler -Chord 'Ctrl+d' -Function DeleteChar
 Set-PSReadLineKeyHandler -Chord 'Ctrl+f' -Function ForwardWord
 Set-PSReadLineKeyHandler -Chord 'Enter' -Function ValidateAndAcceptLine
-```
-
-## Install Apps
-
-```powershell
-notepad.exe .\WingetInstall.ps1
-```
-
-```powershell
-winget install --id Git.Git -e --source winget;
-if ($?) { winget install --id Bitwarden.Bitwarden -e --source winget --scope user };
-if ($?) { winget install --id Telegram.TelegramDesktop -e --source winget --scope user };
-if ($?) { winget install --id Microsoft.VisualStudioCode -e --source winget --scope user };
-if ($?) { winget install --id Obsidian.Obsidian -e --source winget --scope user };
-if ($?) { winget install --id SlackTechnologies.Slack -e --source winget --scope user };
-if ($?) { winget install --id Skillbrains.Lightshot -e --source winget };
-if ($?) { winget install --id LibreWolf.LibreWolf -e --source winget };
-if ($?) { winget install --id Google.Chrome -e --source winget };
-if ($?) { winget install --id Neovim.Neovim -e --source winget };
-```
-
-Additional for Neovim
-
-```powershell
-winget install --id zig.zig -e --source winget --scope user;
-if ($?) { winget install --id -e BurntSushi.ripgrep.MSVC --source winget --scope user };
 ```
 
 ## Install PotPlayer
