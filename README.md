@@ -22,6 +22,32 @@ https://github.com/ryanoasis/nerd-fonts/releases
 
 ## Setup PowerShell
 
+### Install Apps
+
+```powershell
+notepad.exe .\WingetInstall.ps1
+```
+
+```powershell
+winget install --id Git.Git -e --source winget;
+if ($?) { winget install --id Bitwarden.Bitwarden -e --source winget --scope user };
+if ($?) { winget install --id Telegram.TelegramDesktop -e --source winget --scope user };
+if ($?) { winget install --id Microsoft.VisualStudioCode -e --source winget --scope user };
+if ($?) { winget install --id Obsidian.Obsidian -e --source winget --scope user };
+if ($?) { winget install --id SlackTechnologies.Slack -e --source winget --scope user };
+if ($?) { winget install --id Skillbrains.Lightshot -e --source winget };
+if ($?) { winget install --id LibreWolf.LibreWolf -e --source winget };
+if ($?) { winget install --id Google.Chrome -e --source winget };
+if ($?) { winget install --id Neovim.Neovim -e --source winget };
+```
+
+#### Additional for Neovim
+
+```powershell
+winget install --id zig.zig -e --source winget --scope user;
+if ($?) { winget install --id -e BurntSushi.ripgrep.MSVC --source winget --scope user };
+```
+
 ### Add Custom Theme
 
 One Half Dark Edited
@@ -50,32 +76,6 @@ One Half Dark Edited
 	"white": "#DCDFE4",
 	"yellow": "#E5E34F"
 },
-```
-
-## Install Apps
-
-```powershell
-notepad.exe .\WingetInstall.ps1
-```
-
-```powershell
-winget install --id Git.Git -e --source winget;
-if ($?) { winget install --id Bitwarden.Bitwarden -e --source winget --scope user };
-if ($?) { winget install --id Telegram.TelegramDesktop -e --source winget --scope user };
-if ($?) { winget install --id Microsoft.VisualStudioCode -e --source winget --scope user };
-if ($?) { winget install --id Obsidian.Obsidian -e --source winget --scope user };
-if ($?) { winget install --id SlackTechnologies.Slack -e --source winget --scope user };
-if ($?) { winget install --id Skillbrains.Lightshot -e --source winget };
-if ($?) { winget install --id LibreWolf.LibreWolf -e --source winget };
-if ($?) { winget install --id Google.Chrome -e --source winget };
-if ($?) { winget install --id Neovim.Neovim -e --source winget };
-```
-
-Additional for Neovim
-
-```powershell
-winget install --id zig.zig -e --source winget --scope user;
-if ($?) { winget install --id -e BurntSushi.ripgrep.MSVC --source winget --scope user };
 ```
 
 ### Install PowerShell Modules
