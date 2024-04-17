@@ -1,5 +1,11 @@
 # Setup Windows
 
+## Create Local Accounts
+
+```powershell
+New-LocalUser -Name {'user name'}
+```
+
 ## Install PowerShell and Fonts
 
 Install PowerShell
