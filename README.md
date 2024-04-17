@@ -10,7 +10,38 @@ JetBrainsMono Nerd Fonts
 
 https://github.com/ryanoasis/nerd-fonts/releases
 
-## Prepare PowerShell
+## Setup PowerShell
+
+## Add custom theme
+
+One Half Dark Edited
+
+```json
+{
+	"background": "#333361",
+	"black": "#5E5D5D",
+	"blue": "#61AFEF",
+	"brightBlack": "#757575",
+	"brightBlue": "#61AFEF",
+	"brightCyan": "#56B6C2",
+	"brightGreen": "#98C379",
+	"brightPurple": "#C678DD",
+	"brightRed": "#E06C75",
+	"brightWhite": "#DCDFE4",
+	"brightYellow": "#FFFD58",
+	"cursorColor": "#0CFF93",
+	"cyan": "#56B6C2",
+	"foreground": "#FCFCFC",
+	"green": "#98C379",
+	"name": "One Half Dark Edited",
+	"purple": "#C678DD",
+	"red": "#E06C75",
+	"selectionBackground": "#FFFFFF",
+	"white": "#DCDFE4",
+	"yellow": "#E5E34F"
+},
+```
+
 
 ### Types
 
