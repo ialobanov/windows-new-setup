@@ -10,7 +10,7 @@ New-LocalUser -Name {'user name'}
 Add-LocalGroupMember -Group "Users" -Member "{user name}"
 ```
 
-## Install PowerShell and Fonts
+## Install PowerShell and Font
 
 Install PowerShell
 
