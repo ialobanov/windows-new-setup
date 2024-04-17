@@ -12,7 +12,7 @@ https://github.com/ryanoasis/nerd-fonts/releases
 
 ## Setup PowerShell
 
-## Add custom theme
+### Add custom theme
 
 One Half Dark Edited
 
