@@ -6,7 +6,7 @@
 New-LocalUser -Name {'user name'}
 ```
 
-## Install PowerShell and Fonts
+## Install PowerShell and Nerd Fonts
 
 Install PowerShell
 
