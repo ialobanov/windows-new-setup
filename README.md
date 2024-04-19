@@ -59,6 +59,7 @@ if ($?) { winget install --id 7zip.7zip -e --source winget };
 
 ```powershell
 if ($?) { winget install --id qBittorrent.qBittorrent -e --source winget }; # torrnent client
+if ($?) { winget install --id Kitware.CMake -e --source winget }; # compiler for Neovim
 ```
 
 ### Scope - User
@@ -83,8 +84,8 @@ if ($?) { winget install --id qBittorrent.qBittorrent -e --source winget };
 #### Optional
 
 ```powershell
-if ($?) { winget install --id Kitware.CMake -e --source winget --scope user }; # compiler for Neovim
-if ($?) { winget install --id -e BurntSushi.ripgrep.MSVC --source winget --scope user }; # rigrep for Neovim 
+
+if ($?) { winget install --id BurntSushi.ripgrep.MSVC -e --source winget --scope user }; # rigrep for Neovim 
 ```
 
 ## Setup PowerShell
