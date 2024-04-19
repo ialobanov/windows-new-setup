@@ -51,6 +51,7 @@ if ($?) { winget install --id Skillbrains.Lightshot -e --source winget };
 if ($?) { winget install --id LibreWolf.LibreWolf -e --source winget };
 if ($?) { winget install --id Google.Chrome -e --source winget };
 if ($?) { winget install --id Neovim.Neovim -e --source winget };
+## Optional torrnent client
 # if ($?) { winget install --id qBittorrent.qBittorrent -e --source winget };
 ```
 
