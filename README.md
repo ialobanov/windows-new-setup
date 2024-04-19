@@ -7,11 +7,11 @@ Get-NetIPInterface
 ```
 
 ```powershell
-Set-NetIPInterface -InterfaceIndex 11 -InterfaceMetric 90 
+Set-NetIPInterface -InterfaceIndex {number of interface} -InterfaceMetric {minimum number for high priority} 
 ```
 
 ```powershell
-Restart-NetAdapter -InterfaceAlias "Ethernet 2”
+Restart-NetAdapter -InterfaceAlias "Ethernet”
 ```
 
 ## Create Local Accounts
