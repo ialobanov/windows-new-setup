@@ -1,6 +1,6 @@
 # Setup Windows
 
-## Set priority for Network with VPN
+## Set priority for Network Interface
 
 ```powershell
 Get-NetIPInterface
