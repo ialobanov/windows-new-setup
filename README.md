@@ -37,12 +37,34 @@ JetBrainsMono Nerd Fonts
 
 https://github.com/ryanoasis/nerd-fonts/releases
 
-## Setup PowerShell
+## Install Apps
 
-### Install Apps
+### Machine
 
 ```powershell
-notepad.exe .\WingetInstall.ps1
+notepad.exe .\WingetInstallMachine.ps1
+```
+
+```powershell
+winget install --id Git.Git -e --source winget;
+if ($?) { winget install --id Skillbrains.Lightshot -e --source winget };
+if ($?) { winget install --id LibreWolf.LibreWolf -e --source winget };
+if ($?) { winget install --id Google.Chrome -e --source winget };
+if ($?) { winget install --id Neovim.Neovim -e --source winget };
+if ($?) { winget install --id qBittorrent.qBittorrent -e --source winget };
+```
+
+#### Additional for Neovim
+
+```powershell
+winget install --id zig.zig -e --source winget --scope user;
+if ($?) { winget install --id -e BurntSushi.ripgrep.MSVC --source winget --scope user };
+```
+
+### User
+
+```powershell
+notepad.exe .\WingetInstallUser.ps1
 ```
 
 ```powershell
@@ -59,12 +81,7 @@ if ($?) { winget install --id Neovim.Neovim -e --source winget };
 if ($?) { winget install --id qBittorrent.qBittorrent -e --source winget };
 ```
 
-#### Additional for Neovim
-
-```powershell
-winget install --id zig.zig -e --source winget --scope user;
-if ($?) { winget install --id -e BurntSushi.ripgrep.MSVC --source winget --scope user };
-```
+## Setup PowerShell
 
 ### Add Custom Theme
 
