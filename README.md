@@ -58,7 +58,7 @@ if ($?) { winget install --id Neovim.Neovim -e --source winget };
 #### Additional for Neovim
 
 ```powershell
-winget install --id zig.zig -e --source winget --scope user;
+if ($?) { winget install --id zig.zig -e --source winget --scope user };
 if ($?) { winget install --id -e BurntSushi.ripgrep.MSVC --source winget --scope user };
 ```
 
