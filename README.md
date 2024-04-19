@@ -7,7 +7,7 @@ Get-NetIPInterface
 ```
 
 ```powershell
-Set-NetIPInterface -InterfaceIndex {number of interface} -InterfaceMetric {minimum number for high priority} 
+Set-NetIPInterface -InterfaceIndex {number of interface} -InterfaceMetric {minimum number for high priority}
 ```
 
 ```powershell
