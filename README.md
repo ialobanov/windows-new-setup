@@ -83,7 +83,7 @@ if ($?) { winget install --id qBittorrent.qBittorrent -e --source winget };
 #### Optional
 
 ```powershell
-if ($?) { winget install --id zig.zig -e --source winget --scope user }; # compiler for Neovim
+if ($?) { winget install --id Kitware.CMake -e --source winget --scope user }; # compiler for Neovim
 if ($?) { winget install --id -e BurntSushi.ripgrep.MSVC --source winget --scope user }; # rigrep for Neovim 
 ```
 
