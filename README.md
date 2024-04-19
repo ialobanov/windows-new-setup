@@ -31,8 +31,6 @@ Add-LocalGroupMember -Group "Users" -Member "{user name}"
 
 ### Install PowerShell
 
-Install PowerShell
-
 https://github.com/PowerShell/PowerShell/releases
 
 ### Install Apps
