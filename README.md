@@ -58,7 +58,7 @@ if ($?) { winget install --id qBittorrent.qBittorrent -e --source winget }; # to
 if ($?) { winget install --id Kitware.CMake -e --source winget }; # compiler for Neovim
 ```
 
-## User
+## Local Account
 
 ### Install JetBrainsMono Nerd Font
 
