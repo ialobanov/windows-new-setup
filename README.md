@@ -58,8 +58,6 @@ if ($?) { winget install --id Neovim.Neovim -e --source winget };
 
 ```powershell
 if ($?) { winget install --id qBittorrent.qBittorrent -e --source winget }; # torrnent client
-if ($?) { winget install --id zig.zig -e --source winget --scope user }; # compiler for Neovim
-if ($?) { winget install --id -e BurntSushi.ripgrep.MSVC --source winget --scope user }; # rigrep for Neovim 
 ```
 
 ### Scope - User
@@ -79,6 +77,13 @@ if ($?) { winget install --id LibreWolf.LibreWolf -e --source winget };
 if ($?) { winget install --id Google.Chrome -e --source winget };
 if ($?) { winget install --id Neovim.Neovim -e --source winget };
 if ($?) { winget install --id qBittorrent.qBittorrent -e --source winget };
+```
+
+#### Optional
+
+```powershell
+if ($?) { winget install --id zig.zig -e --source winget --scope user }; # compiler for Neovim
+if ($?) { winget install --id -e BurntSushi.ripgrep.MSVC --source winget --scope user }; # rigrep for Neovim 
 ```
 
 ## Setup PowerShell
