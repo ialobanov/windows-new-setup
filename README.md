@@ -1,5 +1,19 @@
 # Setup Windows
 
+## Set priority for Network with VPN
+
+```powershell
+Get-NetIPInterface
+```
+
+```powershell
+Set-NetIPInterface -InterfaceIndex 11 -InterfaceMetric 90 
+```
+
+```powershell
+Restart-NetAdapter -InterfaceAlias "Ethernet 2”
+```
+
 ## Create Local Accounts
 
 ```powershell
