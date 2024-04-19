@@ -17,7 +17,9 @@ Set-NetIPInterface -InterfaceIndex {Specify index} -InterfaceMetric {Specifies a
 Restart-NetAdapter -InterfaceAlias {"Specify IneterfaceAlias"}
 ```
 
-## Create Local Accounts
+## Administrator
+
+### Create Local Accounts
 
 ```powershell
 New-LocalUser -Name {'user name'}
@@ -27,19 +29,13 @@ New-LocalUser -Name {'user name'}
 Add-LocalGroupMember -Group "Users" -Member "{user name}"
 ```
 
-## Install PowerShell and Font
+### Install PowerShell
 
 Install PowerShell
 
 https://github.com/PowerShell/PowerShell/releases
 
-JetBrainsMono Nerd Fonts
-
-https://github.com/ryanoasis/nerd-fonts/releases
-
-## Install Apps
-
-### Scope - Machine
+### Install Apps
 
 ```powershell
 notepad.exe .\WingetInstallMachine.ps1
@@ -55,14 +51,20 @@ if ($?) { winget install --id Neovim.Neovim -e --source winget };
 if ($?) { winget install --id 7zip.7zip -e --source winget };
 ```
 
-#### Optional
+##### Optional
 
 ```powershell
 if ($?) { winget install --id qBittorrent.qBittorrent -e --source winget }; # torrnent client
 if ($?) { winget install --id Kitware.CMake -e --source winget }; # compiler for Neovim
 ```
 
-### Scope - User
+## User
+
+### Install JetBrainsMono Nerd Font
+
+https://github.com/ryanoasis/nerd-fonts/releases
+
+### Install Apps
 
 ```powershell
 notepad.exe .\WingetInstallUser.ps1
@@ -74,10 +76,6 @@ if ($?) { winget install --id Telegram.TelegramDesktop -e --source winget --scop
 if ($?) { winget install --id Microsoft.VisualStudioCode -e --source winget --scope user };
 if ($?) { winget install --id Obsidian.Obsidian -e --source winget --scope user };
 if ($?) { winget install --id SlackTechnologies.Slack -e --source winget --scope user };
-if ($?) { winget install --id Skillbrains.Lightshot -e --source winget };
-if ($?) { winget install --id LibreWolf.LibreWolf -e --source winget };
-if ($?) { winget install --id Google.Chrome -e --source winget };
-if ($?) { winget install --id Neovim.Neovim -e --source winget };
 ```
 
 #### Optional
@@ -87,9 +85,9 @@ if ($?) { winget install --id Neovim.Neovim -e --source winget };
 if ($?) { winget install --id BurntSushi.ripgrep.MSVC -e --source winget --scope user }; # rigrep for Neovim 
 ```
 
-## Setup PowerShell
+### Setup PowerShell
 
-### Add Custom Theme
+#### Add Custom Theme
 
 One Half Dark Edited
 
@@ -119,7 +117,7 @@ One Half Dark Edited
 },
 ```
 
-### Install PowerShell Modules
+#### Install PowerShell Modules
 
 ```powershell
 notepad.exe .\PowerShellInstallModules.ps1
@@ -132,15 +130,15 @@ if ($?) { Install-Module -Name PSReadLine -Scope CurrentUser };
 if ($?) { Install-Module -Name Terminal-Icons -Scope CurrentUser };
 ```
 
-#### Check Modules path
+##### Check Modules path
 
 ```powershell
 Get-Module -ListAvailable -Name {Module Name} | Select-Object -Property Path
 ```
 
-### Add Profile
+#### Add Profile
 
-#### Types
+##### Types
 
 - Current User, Current Host - `$PROFILE`
 - Current User, Current Host - `$PROFILE.CurrentUserCurrentHost`
@@ -148,7 +146,7 @@ Get-Module -ListAvailable -Name {Module Name} | Select-Object -Property Path
 - All Users, Current Host - `$PROFILE.AllUsersCurrentHost`
 - All Users, All Hosts - `$PROFILE.AllUsersAllHosts`
 
-#### Create Profile
+##### Create Profile
 
 ```powershell
 if (!(Test-Path -Path $PROFILE)) {
@@ -156,7 +154,7 @@ if (!(Test-Path -Path $PROFILE)) {
 }
 ```
 
-#### Edit Profile
+##### Edit Profile
 
 ```powershell
 notepad.exe $PROFILE
