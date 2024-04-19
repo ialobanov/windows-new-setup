@@ -39,7 +39,7 @@ https://github.com/ryanoasis/nerd-fonts/releases
 
 ## Install Apps
 
-### Machine
+### Scope - Machine
 
 ```powershell
 notepad.exe .\WingetInstallMachine.ps1
@@ -61,7 +61,7 @@ winget install --id zig.zig -e --source winget --scope user;
 if ($?) { winget install --id -e BurntSushi.ripgrep.MSVC --source winget --scope user };
 ```
 
-### User
+### Scope - User
 
 ```powershell
 notepad.exe .\WingetInstallUser.ps1
