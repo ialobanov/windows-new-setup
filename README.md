@@ -187,7 +187,7 @@ Function Which ($command) {
 }
 
 Function UpdateAll {
-  winget.exe upgrade --source winget --recurse --verbose
+  winget.exe upgrade --source winget
 }
 
 Function GitPush {
