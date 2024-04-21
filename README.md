@@ -19,7 +19,7 @@ Restart-NetAdapter -InterfaceAlias {"Specify IneterfaceAlias"}
 
 ## Administrator
 
-### Create Local Accounts
+### Create Non-Priveledge Accounts
 
 ```powershell
 New-LocalUser -Name {'user name'}
@@ -63,7 +63,7 @@ if ($?) { winget install --id qBittorrent.qBittorrent -e --source winget }; # to
 if ($?) { winget install --id Kitware.CMake -e --source winget }; # compiler for Neovim
 ```
 
-## Local Account
+## Non-Priveledge Accounts
 
 ### Install JetBrainsMono Nerd Font
 
