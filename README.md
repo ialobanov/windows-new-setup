@@ -29,7 +29,7 @@ New-LocalUser -Name {'user name'}
 Add-LocalGroupMember -Group "Users" -Member "{user name}"
 ```
 
-## Microsoft Store Apps
+### Microsoft Store Apps
 
 Update through Microsoft Store next apps:
 
