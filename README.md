@@ -80,6 +80,7 @@ winget install --id Bitwarden.Bitwarden -e --source winget --scope user;
 if ($?) { winget install --id Telegram.TelegramDesktop -e --source winget --scope user };
 if ($?) { winget install --id Microsoft.VisualStudioCode -e --source winget --scope user };
 if ($?) { winget install --id Obsidian.Obsidian -e --source winget --scope user };
+if ($?) { winget install --id Zoom.Zoom --source winget --scope user };
 if ($?) { winget install --id SlackTechnologies.Slack -e --source winget --scope user };
 ```
 
