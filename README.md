@@ -28,13 +28,6 @@ New-LocalUser -Name {'user name'}
 Add-LocalGroupMember -Group "Users" -Member "{user name}"
 ```
 
-### Microsoft Store Apps
-
-Update through Microsoft Store next apps:
-
-- Terminal.
-- App Installer.
-
 ### Install PowerShell
 
 https://github.com/PowerShell/PowerShell/releases
@@ -65,6 +58,13 @@ if ($?) { winget install --id Kitware.CMake -e --source winget }; # compiler for
 ```
 
 ## Non-Priveledge Accounts
+
+### Microsoft Store Apps
+
+Update through Microsoft Store next apps:
+
+- Terminal.
+- App Installer.
 
 ### Install JetBrainsMono Nerd Font
 
