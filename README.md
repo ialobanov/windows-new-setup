@@ -184,7 +184,7 @@ notepad.exe $PROFILE
 ```powershell
 #
 ## Windows PowerShell
-### PowerShell User Profile
+### PowerShell' User Profile
 #
 
 ## Alias
