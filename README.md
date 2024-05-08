@@ -130,6 +130,11 @@ notepad.exe .\PowerShellInstallModules.ps1
 ```
 
 ```powershell
+#
+## Windows PowerShell
+### PS Modules installation
+#
+
 Install-Module -Name posh-git -Scope CurrentUser;
 if ($?) { Install-Module -Name z -Scope CurrentUser };
 if ($?) { Install-Module -Name PSReadLine -Scope CurrentUser };
@@ -167,8 +172,12 @@ notepad.exe $PROFILE
 ```
 
 ```powershell
-## Alias
+#
+## Windows PowerShell
+### PS User Profile
+#
 
+## Alias
 Set-Alias -Name vim -Value $env:ProgramFiles\Neovim\bin\nvim.exe
 Set-Alias -Name cle -Value Clear-Host
 Set-Alias -Name ll -Value Get-ChildItem
@@ -177,7 +186,6 @@ Set-Alias -Name cln -Value CleanTemp
 Set-Alias -Name touch -Value New-Item
 
 ## Functions
-
 Function CleanTemp {
   Remove-Item -Path $env:TEMP\* -Recurse -ErrorAction SilentlyContinue
 }
@@ -196,14 +204,12 @@ Function GitPush {
 }
   
 ## Import-Module
-
 Import-Module -Name $env:ProgramFiles\powershell\7\Modules\PSReadLine\PSReadLine.psd1
 Import-Module -Name $env:USERPROFILE\Documents\PowerShell\Modules\z\1.1.13\z.psd1
 Import-Module -Name $env:USERPROFILE\Documents\PowerShell\Modules\Terminal-Icons\0.11.0\Terminal-Icons.psd1
 Import-Module -Name $env:USERPROFILE\Documents\PowerShell\Modules\posh-git\1.1.0\posh-git.psd1
 
 ## Setup PSReadLineOption
-
 Set-PSReadLineOption -EditMode Emacs
 Set-PSReadLineOption -PredictionSource HistoryAndPlugin
 Set-PSReadlineKeyHandler -Chord 'Ctrl+d' -Function DeleteChar
