@@ -39,6 +39,11 @@ notepad.exe .\WingetInstallMachine.ps1
 ```
 
 ```powershell
+#
+## Windows PowerShell
+### Winget Apps installation
+#
+
 winget install --id Git.Git -e --source winget;
 if ($?) { winget install --id Microsoft.VCRedist.2015+.x64 -e --source winget };
 if ($?) { winget install --id Skillbrains.Lightshot -e --source winget };
@@ -53,6 +58,11 @@ if ($?) { winget install --id Zoom.Zoom --source winget };
 ##### Optional
 
 ```powershell
+#
+## Windows PowerShell
+### Winget Apps installation
+#
+
 if ($?) { winget install --id qBittorrent.qBittorrent -e --source winget }; # torrnent client
 if ($?) { winget install --id Kitware.CMake -e --source winget }; # compiler for Neovim
 ```
@@ -132,7 +142,7 @@ notepad.exe .\PowerShellInstallModules.ps1
 ```powershell
 #
 ## Windows PowerShell
-### PS Modules installation
+### PowerShell Modules installation
 #
 
 Install-Module -Name posh-git -Scope CurrentUser;
@@ -174,7 +184,7 @@ notepad.exe $PROFILE
 ```powershell
 #
 ## Windows PowerShell
-### PS User Profile
+### PowerShell User Profile
 #
 
 ## Alias
