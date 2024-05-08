@@ -43,7 +43,7 @@ notepad.exe .\WingetInstallMachine.ps1
 ## Windows PowerShell
 ### Winget Apps Administrator installation 
 #
-#
+
 winget install --id Git.Git -e --source winget;
 if ($?) { winget install --id Microsoft.VCRedist.2015+.x64 -e --source winget };
 if ($?) { winget install --id Skillbrains.Lightshot -e --source winget };
@@ -86,7 +86,7 @@ notepad.exe .\WingetInstallUser.ps1
 ## Windows PowerShell
 ### Winget Apps Non-Priveledge User installation 
 #
-#
+
 winget install --id Bitwarden.Bitwarden -e --source winget --scope user;
 if ($?) { winget install --id Telegram.TelegramDesktop -e --source winget --scope user };
 if ($?) { winget install --id Microsoft.VisualStudioCode -e --source winget --scope user };
@@ -144,7 +144,7 @@ notepad.exe .\PowerShellInstallModules.ps1
 ## Windows PowerShell
 ### PowerShell' Modules installation
 #
-#
+
 Install-Module -Name posh-git -Scope CurrentUser;
 if ($?) { Install-Module -Name z -Scope CurrentUser };
 if ($?) { Install-Module -Name PSReadLine -Scope CurrentUser };
@@ -185,7 +185,6 @@ notepad.exe $PROFILE
 #
 ## Windows PowerShell
 ### PowerShell User Profile
-#
 #
 
 ## Alias
