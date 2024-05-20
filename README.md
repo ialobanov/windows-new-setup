@@ -154,7 +154,7 @@ if ($?) { Install-Module -Name Terminal-Icons -Scope CurrentUser };
 ##### Check Modules path
 
 ```powershell
-Get-Module -ListAvailable -Name {Module Name} | Select-Object -Property Path
+Get-Module -ListAvailable -Name <Module Name> | Select-Object -Property Path
 ```
 
 #### Add Profile
