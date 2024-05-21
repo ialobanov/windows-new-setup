@@ -47,7 +47,7 @@ notepad.exe .\WingetInstallMachine.ps1
 winget install --id Git.Git -e --source winget;
 if ($?) { winget install --id Microsoft.VCRedist.2015+.x64 -e --source winget };
 if ($?) { winget install --id Skillbrains.Lightshot -e --source winget };
-if ($?) { winget install --id LibreWolf.LibreWolf -e --source winget };
+if ($?) { winget install --id Mozilla.Firefox -e --source winget };
 if ($?) { winget install --id Google.Chrome -e --source winget };
 if ($?) { winget install --id Neovim.Neovim -e --source winget };
 if ($?) { winget install --id VMware.WorkstationPro -e --source winget };
