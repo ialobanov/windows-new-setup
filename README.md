@@ -41,7 +41,7 @@ notepad.exe .\WingetInstallMachine.ps1
 ```powershell
 #
 ## Windows PowerShell
-### Winget Apps Administrator installation 
+### Winget's Apps privileged installation 
 #
 
 winget install --id Git.Git -e --source winget;
@@ -84,7 +84,7 @@ notepad.exe .\WingetInstallUser.ps1
 ```powershell
 #
 ## Windows PowerShell
-### Winget Apps Non-Priveledge User installation 
+### Winget's Apps non-priveledged installation
 #
 
 winget install --id Bitwarden.Bitwarden -e --source winget --scope user;
@@ -142,7 +142,7 @@ notepad.exe .\PowerShellInstallModules.ps1
 ```powershell
 #
 ## Windows PowerShell
-### PowerShell' Modules installation
+### PowerShell Modules installation
 #
 
 Install-Module -Name posh-git -Scope CurrentUser;
@@ -184,7 +184,7 @@ notepad.exe $PROFILE
 ```powershell
 #
 ## Windows PowerShell
-### PowerShell' User Profile
+### PowerShell User Profile
 #
 
 ## Alias
