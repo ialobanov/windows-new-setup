@@ -90,12 +90,13 @@ winget install --id Bitwarden.Bitwarden -e --source winget --scope user;
 if ($?) { winget install --id Telegram.TelegramDesktop -e --source winget --scope user };
 if ($?) { winget install --id Microsoft.VisualStudioCode -e --source winget --scope user };
 if ($?) { winget install --id Obsidian.Obsidian -e --source winget --scope user };
-if ($?) { winget install --id Mozilla.Thunderbird -e --source winget --scope user };
 ```
 
 #### Optional
 
 ```powershell
+if ($?) { winget install --id Mozilla.Thunderbird -e --source winget --scope user };
+if ($?) { winget install --id Yandex.Browser -e --source winget --scope user };
 if ($?) { winget install --id SlackTechnologies.Slack -e --source winget --scope user };
 if ($?) { winget install --id BurntSushi.ripgrep.MSVC -e --source winget --scope user }; # rigrep for Neovim 
 ```
