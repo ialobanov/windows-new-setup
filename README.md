@@ -90,6 +90,7 @@ winget install --id Bitwarden.Bitwarden -e --source winget --scope user;
 if ($?) { winget install --id Telegram.TelegramDesktop -e --source winget --scope user };
 if ($?) { winget install --id Microsoft.VisualStudioCode -e --source winget --scope user };
 if ($?) { winget install --id Obsidian.Obsidian -e --source winget --scope user };
+if ($?) { winget install --id Mozilla.Thunderbird -e --source winget --scope user };
 ```
 
 #### Optional
