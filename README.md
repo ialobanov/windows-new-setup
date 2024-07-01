@@ -60,13 +60,19 @@ if ($?) { winget install --id Neovim.Neovim -e --source winget }; # Neovim is a 
 if ($?) { winget install --id 7zip.7zip -e --source winget };
 ```
 
-##### Optional
+#### Optional
 
 ```powershell
 if ($?) { winget install --id ALCPU.CoreTemp --source winget }; # Program to monitor processor temperature and other vital information
 if ($?) { winget install --id FxSoundLLC.FxSound --source winget }; # Equalizer for Windows
 if ($?) { winget install --id Kitware.CMake -e --source winget }; # compiler for Neovim
 if ($?) { winget install --id Zoom.Zoom --source winget };
+```
+
+#### Enable Hyper-V
+
+```powershell
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
 ```
 
 ## Non-Priveledge User
