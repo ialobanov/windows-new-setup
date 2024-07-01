@@ -49,16 +49,18 @@ if ($?) { winget install --id Microsoft.VCRedist.2015+.x64 -e --source winget };
 if ($?) { winget install --id Skillbrains.Lightshot -e --source winget };
 if ($?) { winget install --id qBittorrent.qBittorrent -e --source winget };
 if ($?) { winget install --id Google.Chrome -e --source winget };
-if ($?) { winget install --id Neovim.Neovim -e --source winget };
-if ($?) { winget install --id VMware.WorkstationPro -e --source winget };
+if ($?) { winget install --id Neovim.Neovim -e --source winget }; # Neovim is a refactor, and sometimes redactor, in the tradition of Vim
 if ($?) { winget install --id 7zip.7zip -e --source winget };
-if ($?) { winget install --id Zoom.Zoom --source winget };
 ```
 
 ##### Optional
 
 ```powershell
+if ($?) { winget install --id ALCPU.CoreTemp --source winget }; # Program to monitor processor temperature and other vital information
+if ($?) { winget install --id FxSoundLLC.FxSound --source winget }; # Equalizer for Windows
 if ($?) { winget install --id Kitware.CMake -e --source winget }; # compiler for Neovim
+if ($?) { winget install --id Zoom.Zoom --source winget };
+if ($?) { winget install --id VMware.WorkstationPro -e --source winget };
 ```
 
 ## Non-Priveledge User
