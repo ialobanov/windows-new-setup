@@ -32,6 +32,13 @@ Add-LocalGroupMember -Group "Users" -Member "<user name>"
 
 https://github.com/PowerShell/PowerShell/releases
 
+### Microsoft Store Apps
+
+Update through Microsoft Store next apps:
+
+- Terminal.
+- App Installer.
+
 ### Install Apps
 
 ```powershell
@@ -60,17 +67,9 @@ if ($?) { winget install --id ALCPU.CoreTemp --source winget }; # Program to mon
 if ($?) { winget install --id FxSoundLLC.FxSound --source winget }; # Equalizer for Windows
 if ($?) { winget install --id Kitware.CMake -e --source winget }; # compiler for Neovim
 if ($?) { winget install --id Zoom.Zoom --source winget };
-if ($?) { winget install --id VMware.WorkstationPro -e --source winget };
 ```
 
 ## Non-Priveledge User
-
-### Microsoft Store Apps
-
-Update through Microsoft Store next apps:
-
-- Terminal.
-- App Installer.
 
 ### Install JetBrainsMono Nerd Font
 
