@@ -201,6 +201,7 @@ Set-Alias -Name ll -Value Get-ChildItem
 Set-Alias -Name indeed -Value $Env:USERPROFILE\Documents\Default.rdp
 Set-Alias -Name cln -Value CleanTemp 
 Set-Alias -Name touch -Value New-Item
+Set-Alias -Name sudo -Value gsudo.exe
 
 ## Functions
 Function CleanTemp {
