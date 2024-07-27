@@ -42,7 +42,7 @@ Update through Microsoft Store next apps:
 ### Install Apps
 
 ```powershell
-notepad.exe .\WingetInstallMachine.ps1
+notepad.exe .\PowerShellInstall_Winget_Machine.ps1
 ```
 
 ```powershell
@@ -84,7 +84,7 @@ https://github.com/ryanoasis/nerd-fonts/releases
 ### Install Apps
 
 ```powershell
-notepad.exe .\WingetInstallUser.ps1
+notepad.exe .\PowerShellInstall_Winget_User.ps1
 ```
 
 ```powershell
@@ -106,6 +106,12 @@ if ($?) { winget install --id Mozilla.Thunderbird -e --source winget --scope use
 if ($?) { winget install --id Yandex.Browser -e --source winget --scope user };
 if ($?) { winget install --id SlackTechnologies.Slack -e --source winget --scope user };
 if ($?) { winget install --id BurntSushi.ripgrep.MSVC -e --source winget --scope user }; # rigrep for Neovim 
+```
+
+### Delete installation files
+
+```powershell
+Remove-Item $env:USERPROFILE\PowerShellInstall_.ps1
 ```
 
 ### Setup PowerShell
@@ -143,7 +149,7 @@ One Half Dark Edited
 #### Install PowerShell Modules
 
 ```powershell
-notepad.exe .\PowerShellInstallModules.ps1
+notepad.exe .\PowerShellInstall_Modules.ps1
 ```
 
 ```powershell
