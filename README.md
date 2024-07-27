@@ -111,7 +111,7 @@ if ($?) { winget install --id BurntSushi.ripgrep.MSVC -e --source winget --scope
 ### Delete installation files
 
 ```powershell
-Remove-Item $env:USERPROFILE\PowerShellInstall_.ps1
+Remove-Item $env:USERPROFILE\PowerShellInstall_*.ps1
 ```
 
 ### Setup PowerShell
