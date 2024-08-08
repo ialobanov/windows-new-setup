@@ -122,7 +122,7 @@ One Half Dark Edited
 
 ```json
 {
-	"background": "#3F3861",
+	"background": "#2C2845",
 	"black": "#5E5D5D",
 	"blue": "#61AFEF",
 	"brightBlack": "#757575",
