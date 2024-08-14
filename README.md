@@ -55,7 +55,7 @@ winget install --id Git.Git -e --source winget;
 if ($?) { winget install --id Microsoft.VCRedist.2015+.x64 -e --source winget };
 if ($?) { winget install --id Skillbrains.Lightshot -e --source winget };
 if ($?) { winget install --id qBittorrent.qBittorrent -e --source winget };
-if ($?) { winget install --id Google.Chrome -e --source winget };
+if ($?) { winget install --id Google.Chrome -e --source winget --ignore-security-hash };
 if ($?) { winget install --id Neovim.Neovim -e --source winget }; # Neovim is a refactor, and sometimes redactor, in the tradition of Vim
 if ($?) { winget install --id 7zip.7zip -e --source winget };
 ```
@@ -96,7 +96,7 @@ notepad.exe .\PowerShellInstall_Winget_User.ps1
 winget install --id Bitwarden.Bitwarden -e --source winget --scope user;
 if ($?) { winget install --id Telegram.TelegramDesktop -e --source winget --scope user };
 if ($?) { winget install --id Microsoft.VisualStudioCode -e --source winget --scope user };
-if ($?) { winget install --id Obsidian.Obsidian -e --source winget --scope user };
+if ($?) { winget install --id Obsidian.Obsidian -e --source winget --scope user --ignore-security-hash };
 ```
 
 #### Optional
@@ -104,7 +104,6 @@ if ($?) { winget install --id Obsidian.Obsidian -e --source winget --scope user 
 ```powershell
 if ($?) { winget install --id Mozilla.Thunderbird -e --source winget --scope user };
 if ($?) { winget install --id Yandex.Browser -e --source winget --scope user };
-if ($?) { winget install --id SlackTechnologies.Slack -e --source winget --scope user };
 if ($?) { winget install --id BurntSushi.ripgrep.MSVC -e --source winget --scope user }; # rigrep for Neovim 
 ```
 
