@@ -207,10 +207,10 @@ Set-Alias -Name indeed -Value $Env:USERPROFILE\Documents\Default.rdp
 Set-Alias -Name cln -Value CleanTemp 
 Set-Alias -Name touch -Value New-Item
 Set-Alias -Name sudo -Value $env:LOCALAPPDATA\Microsoft\WinGet\Packages\gerardog.gsudo_Microsoft.Winget.Source_8wekyb3d8bbwe\x64\gsudo.exe
-Set-Alias -Name gs -Value GitStatus
+Set-Alias -Name gst -Value GitStatus
 Set-Alias -Name ua -Value UpdateAll
-Set-Alias -Name gpsh -Value GitPush
-Set-Alias -Name gpll -Value GitPull
+Set-Alias -Name gsh -Value GitPush
+Set-Alias -Name gll -Value GitPull
 
 ## Functions
 Function GitPull {
