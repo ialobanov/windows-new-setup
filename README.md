@@ -209,12 +209,12 @@ Set-Alias -Name touch -Value New-Item
 Set-Alias -Name sudo -Value $env:LOCALAPPDATA\Microsoft\WinGet\Packages\gerardog.gsudo_Microsoft.Winget.Source_8wekyb3d8bbwe\x64\gsudo.exe
 Set-Alias -Name gs -Value GitStatus
 Set-Alias -Name ua -Value UpdateAll
-Set-Alias -Name gps -Value GitPush
-Set-Alias -Name gpl -Value GitPull
+Set-Alias -Name gpsh -Value GitPush
+Set-Alias -Name gpll -Value GitPull
 
 ## Functions
 Function GitPull {
-  git.exe pull
+  git.exe pull; if ($?) { Clear-Host }
 }
 
 Function GitStatus {
