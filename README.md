@@ -206,8 +206,8 @@ Set-Alias -Name ll -Value Get-ChildItem
 Set-Alias -Name cln -Value CleanTemp 
 Set-Alias -Name touch -Value New-Item
 Set-Alias -Name sudo -Value $env:LOCALAPPDATA\Microsoft\WinGet\Packages\gerardog.gsudo_Microsoft.Winget.Source_8wekyb3d8bbwe\x64\gsudo.exe
-Set-Alias -Name gst -Value GitStatus
 Set-Alias -Name ua -Value UpdateAll
+Set-Alias -Name gst -Value GitStatus
 Set-Alias -Name gsh -Value GitPush
 Set-Alias -Name gll -Value GitPull
 
