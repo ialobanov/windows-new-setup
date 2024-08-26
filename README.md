@@ -203,7 +203,6 @@ notepad.exe $PROFILE
 Set-Alias -Name vim -Value $env:ProgramFiles\Neovim\bin\nvim.exe
 Set-Alias -Name cle -Value Clear-Host
 Set-Alias -Name ll -Value Get-ChildItem
-Set-Alias -Name indeed -Value $Env:USERPROFILE\Documents\Default.rdp
 Set-Alias -Name cln -Value CleanTemp 
 Set-Alias -Name touch -Value New-Item
 Set-Alias -Name sudo -Value $env:LOCALAPPDATA\Microsoft\WinGet\Packages\gerardog.gsudo_Microsoft.Winget.Source_8wekyb3d8bbwe\x64\gsudo.exe
