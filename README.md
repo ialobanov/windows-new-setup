@@ -127,7 +127,7 @@ One Half Dark Edited:
 	"selectionBackground": "#FFFFFF",
 	"white": "#DCDFE4",
 	"yellow": "#E5E34F"
-},
+}
 ```
 
 ### Add Profile
