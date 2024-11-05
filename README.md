@@ -20,7 +20,7 @@ Restart-NetAdapter -InterfaceAlias <"Specify an IneterfaceAlias">
 
 https://github.com/PowerShell/PowerShell/releases
 
-## Microsoft store apps
+## Update apps
 
 Update through Microsoft Store next apps:
 
