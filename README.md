@@ -79,7 +79,7 @@ notepad.exe .\PowerShellInstall_Modules.ps1
 ```powershell
 #
 ## Windows PowerShell
-### PowerShell Modules installation
+### PowerShell modules installation
 #
 
 Install-Module -Name posh-git -Scope CurrentUser;
