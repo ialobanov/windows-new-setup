@@ -36,7 +36,7 @@ notepad.exe .\PowerShellInstall_Winget_Machine.ps1
 ```powershell
 #
 ## Windows PowerShell
-### Winget's Apps privileged installation 
+### Winget's apps installation 
 #
 
 winget install --id Git.Git -e --source winget;
