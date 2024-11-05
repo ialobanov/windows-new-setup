@@ -70,9 +70,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
 
 https://github.com/ryanoasis/nerd-fonts/releases
 
-## Setup PowerShell
-
-### Install PowerShell Modules
+## Install PowerShell Modules
 
 ```powershell
 notepad.exe .\PowerShellInstall_Modules.ps1
@@ -94,11 +92,13 @@ if ($?) { Install-Module -Name Terminal-Icons -Scope CurrentUser };
 .\PowerShellInstall_Modules.ps1
 ```
 
-### Delete installation files
+## Delete installation files
 
 ```powershell
 Remove-Item $env:USERPROFILE\PowerShellInstall_*.ps1
 ``
+
+## Setup PowerShell
 
 ### Add Custom Theme
 
