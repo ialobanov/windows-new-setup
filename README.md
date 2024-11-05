@@ -16,30 +16,18 @@ Set-NetIPInterface -InterfaceIndex <Specify an index> -InterfaceMetric <Specify 
 Restart-NetAdapter -InterfaceAlias <"Specify an IneterfaceAlias">
 ```
 
-## Administrator
-
-### Create Non-Priveledge Accounts
-
-```powershell
-New-LocalUser -Name <'user name'>
-```
-
-```powershell
-Add-LocalGroupMember -Group "Users" -Member "<user name>"
-```
-
-### Install PowerShell
+## Install PowerShell
 
 https://github.com/PowerShell/PowerShell/releases
 
-### Microsoft Store Apps
+## Microsoft Store Apps
 
 Update through Microsoft Store next apps:
 
 - Terminal.
 - App Installer.
 
-### Install Apps
+## Install Apps
 
 ```powershell
 notepad.exe .\PowerShellInstall_Winget_Machine.ps1
@@ -58,60 +46,63 @@ if ($?) { winget install --id qBittorrent.qBittorrent -e --source winget };
 if ($?) { winget install --id Google.Chrome -e --source winget };
 if ($?) { winget install --id Neovim.Neovim -e --source winget }; # Neovim is a refactor, and sometimes redactor, in the tradition of Vim
 if ($?) { winget install --id 7zip.7zip -e --source winget };
-```
-
-#### Optional
-
-```powershell
 if ($?) { winget install --id Mozilla.Thunderbird -e --source winget };
 if ($?) { winget install --id ALCPU.CoreTemp --source winget }; # Program to monitor processor temperature and other vital information
 if ($?) { winget install --id FxSoundLLC.FxSound --source winget }; # Equalizer for Windows
-if ($?) { winget install --id Kitware.CMake -e --source winget }; # compiler for Neovim
-if ($?) { winget install --id Zoom.Zoom --source winget };
+if ($?) { winget install --id Bitwarden.Bitwarden -e --source winget --scope user };
+if ($?) { winget install --id Telegram.TelegramDesktop -e --source winget --scope user };
+if ($?) { winget install --id Microsoft.VisualStudioCode -e --source winget --scope user };
+if ($?) { winget install --id Obsidian.Obsidian -e --source winget --scope user };
+if ($?) { winget install --id Yandex.Browser -e --source winget --scope user };
 ```
 
-#### Enable Hyper-V
+```powershell
+.\PowerShellInstall_Winget_Machine.ps1
+```
+
+## Enable Hyper-V
 
 ```powershell
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
 ```
 
-## Non-Priveledge User
-
-### Install JetBrainsMono Nerd Font
+## Install JetBrainsMono Nerd Font
 
 https://github.com/ryanoasis/nerd-fonts/releases
 
-### Install Apps
+## Setup PowerShell
+
+### Install PowerShell Modules
 
 ```powershell
-notepad.exe .\PowerShellInstall_Winget_User.ps1
+notepad.exe .\PowerShellInstall_Modules.ps1
 ```
 
 ```powershell
 #
 ## Windows PowerShell
-### Winget's Apps non-priveledged installation
+### PowerShell Modules installation
 #
 
-winget install --id Bitwarden.Bitwarden -e --source winget --scope user;
-if ($?) { winget install --id Telegram.TelegramDesktop -e --source winget --scope user };
-if ($?) { winget install --id Microsoft.VisualStudioCode -e --source winget --scope user };
-if ($?) { winget install --id Obsidian.Obsidian -e --source winget --scope user };
+Install-Module -Name posh-git -Scope CurrentUser;
+if ($?) { Install-Module -Name z -Scope CurrentUser };
+if ($?) { Install-Module -Name PSReadLine -Scope CurrentUser };
+if ($?) { Install-Module -Name Terminal-Icons -Scope CurrentUser };
 ```
-
-#### Optional
 
 ```powershell
-if ($?) { winget install --id Yandex.Browser -e --source winget --scope user };
-if ($?) { winget install --id BurntSushi.ripgrep.MSVC -e --source winget --scope user }; # rigrep for Neovim 
+.\PowerShellInstall_Modules.ps1
 ```
 
-### Setup PowerShell
+### Delete installation files
 
-#### Add Custom Theme
+```powershell
+Remove-Item $env:USERPROFILE\PowerShellInstall_*.ps1
+``
 
-One Half Dark Edited
+### Add Custom Theme
+
+One Half Dark Edited:
 
 ```json
 {
@@ -139,43 +130,9 @@ One Half Dark Edited
 },
 ```
 
-#### Install PowerShell Modules
+### Add Profile
 
-```powershell
-notepad.exe .\PowerShellInstall_Modules.ps1
-```
-
-```powershell
-#
-## Windows PowerShell
-### PowerShell Modules installation
-#
-
-Install-Module -Name posh-git -Scope CurrentUser;
-if ($?) { Install-Module -Name z -Scope CurrentUser };
-if ($?) { Install-Module -Name PSReadLine -Scope CurrentUser };
-if ($?) { Install-Module -Name Terminal-Icons -Scope CurrentUser };
-```
-
-```powershell
-.\PowerShellInstall_Modules.ps1
-```
-
-##### Check Modules path
-
-```powershell
-Get-Module -ListAvailable -Name <Module Name> | Select-Object -Property Path
-```
-
-#### Delete installation files
-
-```powershell
-Remove-Item $env:USERPROFILE\PowerShellInstall_*.ps1
-```
-
-#### Add Profile
-
-##### Types
+#### Types
 
 - Current User, Current Host - `$PROFILE`
 - Current User, Current Host - `$PROFILE.CurrentUserCurrentHost`
@@ -183,7 +140,7 @@ Remove-Item $env:USERPROFILE\PowerShellInstall_*.ps1
 - All Users, Current Host - `$PROFILE.AllUsersCurrentHost`
 - All Users, All Hosts - `$PROFILE.AllUsersAllHosts`
 
-##### Create Profile
+#### Create profile `$PROFILE`
 
 ```powershell
 if (!(Test-Path -Path $PROFILE)) {
@@ -191,7 +148,7 @@ if (!(Test-Path -Path $PROFILE)) {
 }
 ```
 
-##### Edit Profile
+#### Edit Profile
 
 ```powershell
 notepad.exe $PROFILE
