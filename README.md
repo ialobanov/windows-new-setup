@@ -96,7 +96,7 @@ if ($?) { Install-Module -Name Terminal-Icons -Scope CurrentUser };
 
 ```powershell
 Remove-Item $env:USERPROFILE\PowerShellInstall_*.ps1
-``
+```
 
 ## Setup PowerShell
 
