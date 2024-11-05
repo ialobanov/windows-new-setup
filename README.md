@@ -63,6 +63,7 @@ if ($?) { winget install --id 7zip.7zip -e --source winget };
 #### Optional
 
 ```powershell
+if ($?) { winget install --id Mozilla.Thunderbird -e --source winget };
 if ($?) { winget install --id ALCPU.CoreTemp --source winget }; # Program to monitor processor temperature and other vital information
 if ($?) { winget install --id FxSoundLLC.FxSound --source winget }; # Equalizer for Windows
 if ($?) { winget install --id Kitware.CMake -e --source winget }; # compiler for Neovim
@@ -102,7 +103,6 @@ if ($?) { winget install --id Obsidian.Obsidian -e --source winget --scope user 
 #### Optional
 
 ```powershell
-if ($?) { winget install --id Mozilla.Thunderbird -e --source winget --scope user };
 if ($?) { winget install --id Yandex.Browser -e --source winget --scope user };
 if ($?) { winget install --id BurntSushi.ripgrep.MSVC -e --source winget --scope user }; # rigrep for Neovim 
 ```
