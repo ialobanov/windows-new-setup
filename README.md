@@ -1,6 +1,6 @@
 # Setup Windows
 
-## Set preference for specific Network Interface
+## Set preference for specific network interface
 
 ```powershell
 Get-NetIPInterface
@@ -20,14 +20,14 @@ Restart-NetAdapter -InterfaceAlias <"Specify an IneterfaceAlias">
 
 https://github.com/PowerShell/PowerShell/releases
 
-## Microsoft Store Apps
+## Microsoft store apps
 
 Update through Microsoft Store next apps:
 
 - Terminal.
 - App Installer.
 
-## Install Apps
+## Install apps
 
 ```powershell
 notepad.exe .\PowerShellInstall_Winget_Machine.ps1
@@ -66,11 +66,11 @@ if ($?) { winget install --id Yandex.Browser -e --source winget --scope user };
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
 ```
 
-## Install JetBrainsMono Nerd Font
+## Install JetBrainsMono nerd font
 
 https://github.com/ryanoasis/nerd-fonts/releases
 
-## Install PowerShell Modules
+## Install PowerShell modules
 
 ```powershell
 notepad.exe .\PowerShellInstall_Modules.ps1
@@ -100,9 +100,9 @@ Remove-Item $env:USERPROFILE\PowerShellInstall_*.ps1
 
 ## Setup PowerShell
 
-### Add Custom Theme
+### Add custom theme "One Half Dark Edited"
 
-Insert inside brackets into "schemes" theme "One Half Dark Edited":
+Insert inside brackets into "schemes":
 
 ```json
 {
@@ -130,7 +130,7 @@ Insert inside brackets into "schemes" theme "One Half Dark Edited":
 }
 ```
 
-### Add Profile
+### Add profile
 
 #### Types
 
@@ -148,7 +148,7 @@ if (!(Test-Path -Path $PROFILE)) {
 }
 ```
 
-#### Edit Profile
+#### Edit profile
 
 ```powershell
 notepad.exe $PROFILE
