@@ -102,7 +102,7 @@ Remove-Item $env:USERPROFILE\PowerShellInstall_*.ps1
 
 ### Add Custom Theme
 
-Inseret inside brackets into "schemes" theme "One Half Dark Edited":
+Insert inside brackets into "schemes" theme "One Half Dark Edited":
 
 ```json
 {
