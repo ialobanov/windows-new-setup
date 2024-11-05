@@ -107,12 +107,6 @@ if ($?) { winget install --id Yandex.Browser -e --source winget --scope user };
 if ($?) { winget install --id BurntSushi.ripgrep.MSVC -e --source winget --scope user }; # rigrep for Neovim 
 ```
 
-### Delete installation files
-
-```powershell
-Remove-Item $env:USERPROFILE\PowerShellInstall_*.ps1
-```
-
 ### Setup PowerShell
 
 #### Add Custom Theme
@@ -163,10 +157,20 @@ if ($?) { Install-Module -Name PSReadLine -Scope CurrentUser };
 if ($?) { Install-Module -Name Terminal-Icons -Scope CurrentUser };
 ```
 
+```powershell
+.\PowerShellInstall_Modules.ps1
+```
+
 ##### Check Modules path
 
 ```powershell
 Get-Module -ListAvailable -Name <Module Name> | Select-Object -Property Path
+```
+
+#### Delete installation files
+
+```powershell
+Remove-Item $env:USERPROFILE\PowerShellInstall_*.ps1
 ```
 
 #### Add Profile
