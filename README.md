@@ -141,7 +141,7 @@ Insert inside brackets into "schemes":
 - All Users, Current Host - `$PROFILE.AllUsersCurrentHost`
 - All Users, All Hosts - `$PROFILE.AllUsersAllHosts`
 
-#### Create profile `$PROFILE`
+#### Create profile
 
 ```powershell
 if (!(Test-Path -Path $PROFILE)) {
