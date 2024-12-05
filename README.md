@@ -161,6 +161,7 @@ notepad.exe $PROFILE
 ### PowerShell User Profile
 #
 
+##########
 #### Alias
 
 Set-Alias -Name vim -Value $env:ProgramFiles\Neovim\bin\nvim.exe
@@ -175,6 +176,7 @@ Set-Alias -Name gsh -Value GitPush
 Set-Alias -Name gll -Value GitPull
 Set-Alias -Name hosts -Value ChangeHosts
 
+##############
 #### Functions
 
 Function ChangeHosts {
@@ -205,15 +207,17 @@ Function UpdateAll {
 Function GitPush {
   git.exe add .; if ($?) { git.exe commit -am "." }; if ($?) { git.exe push }; if ($?) { Clear-Host }
 }
-  
-## Import-Module
+
+##################  
+#### Import-Module
 
 Import-Module -Name PSReadLine
 Import-Module -Name z
 Import-Module -Name Terminal-Icons
 Import-Module -Name posh-git
 
-## Setup PSReadLineOption
+###########################
+#### Setup PSReadLineOption
 
 Set-PSReadLineOption -EditMode Emacs
 Set-PSReadLineOption -PredictionSource HistoryAndPlugin
