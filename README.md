@@ -161,7 +161,8 @@ notepad.exe $PROFILE
 ### PowerShell User Profile
 #
 
-## Alias
+#### Alias
+
 Set-Alias -Name vim -Value $env:ProgramFiles\Neovim\bin\nvim.exe
 Set-Alias -Name cle -Value Clear-Host
 Set-Alias -Name ll -Value Get-ChildItem
@@ -172,8 +173,14 @@ Set-Alias -Name ua -Value UpdateAll
 Set-Alias -Name gst -Value GitStatus
 Set-Alias -Name gsh -Value GitPush
 Set-Alias -Name gll -Value GitPull
+Set-Alias -Name hosts -Value ChangeHosts
 
-## Functions
+#### Functions
+
+Function ChangeHosts {
+  sudo nvim $env:SystemRoot\System32\drivers\etc\hosts
+}
+
 Function GitPull {
   git.exe pull; if ($?) { Clear-Host }
 }
@@ -200,12 +207,14 @@ Function GitPush {
 }
   
 ## Import-Module
+
 Import-Module -Name PSReadLine
 Import-Module -Name z
 Import-Module -Name Terminal-Icons
 Import-Module -Name posh-git
 
 ## Setup PSReadLineOption
+
 Set-PSReadLineOption -EditMode Emacs
 Set-PSReadLineOption -PredictionSource HistoryAndPlugin
 Set-PSReadLineOption -PredictionViewStyle ListView
