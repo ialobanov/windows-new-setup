@@ -67,10 +67,6 @@ if ($?) { winget install --id Yandex.Browser -e --source winget --scope user };
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
 ```
 
-## Install JetBrainsMono nerd font
-
-https://github.com/ryanoasis/nerd-fonts/releases
-
 ## Install PowerShell modules
 
 ```powershell
