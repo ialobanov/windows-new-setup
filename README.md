@@ -178,7 +178,7 @@ Set-Alias -Name pubkey -Value SSHPubkey
 #### Functions
 
 Function SSHPubkey {
-  Get-Content $env:USERPROFILE\.ssh\id_rsa.pub | ssh $(Read-Host -Prompt 'user')@$(Read-Host -Prompt 'ip-adress') 'cat >> $HOME/.ssh/authorized_keys'
+  Get-Content $env:USERPROFILE\.ssh\id_rsa.pub | ssh $(Read-Host -Prompt 'Enter user@ip-address') 'cat >> $HOME/.ssh/authorized_keys'
 }
 
 Function ChangeHosts {
