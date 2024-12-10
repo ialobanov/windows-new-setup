@@ -172,9 +172,14 @@ Set-Alias -Name gst -Value GitStatus
 Set-Alias -Name gsh -Value GitPush
 Set-Alias -Name gll -Value GitPull
 Set-Alias -Name hosts -Value ChangeHosts
+Set-Alias -Name pubkey -Value SSHPubkey
 
 ##############
 #### Functions
+
+Function SSHPubkey {
+  Get-Content $env:USERPROFILE\.ssh\id_rsa.pub | ssh $(Read-Host -Prompt 'user')@$(Read-Host -Prompt 'ip-adress') 'cat >> $HOME/.ssh/authorized_keys'
+}
 
 Function ChangeHosts {
   sudo nvim $env:SystemRoot\System32\drivers\etc\hosts
