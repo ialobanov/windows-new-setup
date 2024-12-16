@@ -3,7 +3,7 @@
 ## Set preference for specific network interface
 
 ```powershell
-Get-NetIPInterface
+Get-NetIPInterface -AddressFamily IPv4
 ```
 
 ```powershell
