@@ -160,8 +160,7 @@ notepad.exe $PROFILE
 ### PowerShell User Profile
 #
 
-##########
-#### Alias
+### Alias
 
 Set-Alias -Name vim -Value $env:ProgramFiles\Neovim\bin\nvim.exe
 Set-Alias -Name cle -Value Clear-Host
@@ -176,8 +175,7 @@ Set-Alias -Name gll -Value GitPull
 Set-Alias -Name hosts -Value ChangeHosts
 Set-Alias -Name pubkey -Value SSHPubkey
 
-##############
-#### Functions
+### Functions
 
 Function SSHPubkey {
   Get-Content $env:USERPROFILE\.ssh\id_rsa.pub | ssh $(Read-Host -Prompt 'Enter user@ip-address') 'cat >> $HOME/.ssh/authorized_keys'
@@ -212,16 +210,14 @@ Function GitPush {
   git.exe add .; if ($?) { git.exe commit -am "." }; if ($?) { git.exe push }; if ($?) { Clear-Host }
 }
 
-##################  
-#### Import-Module
+### Import-Module
 
 Import-Module -Name PSReadLine
 Import-Module -Name z
 Import-Module -Name Terminal-Icons
 Import-Module -Name posh-git
 
-###########################
-#### Setup PSReadLineOption
+### Setup PSReadLineOption
 
 Set-PSReadLineOption -EditMode Emacs
 Set-PSReadLineOption -PredictionSource HistoryAndPlugin
