@@ -64,6 +64,8 @@ if ($?) { winget install --id Yandex.Browser -e --source winget --scope user };
 
 ## Enable Hyper-V
 
+Run PowerShell as Administrator and execute command:
+
 ```powershell
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
 ```
