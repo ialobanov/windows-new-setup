@@ -2,6 +2,8 @@
 
 ## Set preference for specific network interface
 
+Run Windows PowerShell as Administrator and execute commands:
+
 ```powershell
 Get-NetIPInterface -AddressFamily IPv4
 ```
