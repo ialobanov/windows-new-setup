@@ -34,7 +34,7 @@ Restart Windows Terminal and install Microsoft PowerShell:
 winget install --id Microsoft.PowerShell -e --source winget
 ```
 
-Restart Windows Terminal and setup default profile as PowerShell.
+Restart Terminal again and setup default profile as PowerShell.
 
 ## Install apps
 
