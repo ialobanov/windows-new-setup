@@ -25,7 +25,7 @@ Close Windows Terminal.
 Run Windows Terminal with Windows PowerShell and update system apps: 
 
 ```powershell
-winget update --id Microsoft.AppInstaller -e; if ($?) { winget update --id Microsoft.WindowsTerminal -e };
+winget update --id Microsoft.AppInstaller -e --accept-source-agreements; if ($?) { winget update --id Microsoft.WindowsTerminal -e };
 ```
 
 Restart Windows Terminal and install Microsoft PowerShell:
