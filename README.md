@@ -34,7 +34,11 @@ Restart Windows Terminal and install Microsoft PowerShell:
 winget install --id Microsoft.PowerShell -e --source winget
 ```
 
+Restart Windows Terminal and setup default profile as PowerShell.
+
 ## Install apps
+
+Run Windows Terminal as Administrator and create list of apps. My current list:
 
 ```powershell
 notepad.exe .\PowerShellInstall_Winget_Machine.ps1
@@ -65,13 +69,15 @@ if ($?) { winget install --id Obsidian.Obsidian -e --source winget --scope user 
 if ($?) { winget install --id Yandex.Browser -e --source winget --scope user };
 ```
 
+Execute PowerShell script:
+
 ```powershell
 .\PowerShellInstall_Winget_Machine.ps1
 ```
 
 ## Enable Hyper-V
 
-Run PowerShell as Administrator and execute command:
+Run Terminal as Administrator and enable Hyper-V:
 
 ```powershell
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
