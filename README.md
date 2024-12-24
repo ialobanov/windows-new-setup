@@ -2,7 +2,7 @@
 
 ## Set preference for specific network interface
 
-Run Windows PowerShell as Administrator and execute commands:
+Run Windows PowerShell as Administrator from Windows Termanial and execute commands:
 
 ```powershell
 Get-NetIPInterface -AddressFamily IPv4
@@ -20,14 +20,17 @@ Restart-NetAdapter -InterfaceAlias "Specify an IneterfaceAlias"
 
 ## Install PowerShell
 
-https://github.com/PowerShell/PowerShell/releases
+Run Windows PowerShell and update system apps: 
 
-## Update apps
+```powershell
+winget update --id Microsoft.WindowsTerminal -e; if ($?) { winget update --id Microsoft.AppInstaller -e };
+```
 
-Update through Microsoft Store next apps:
+Restart Windows Terminal and install Microsoft PowerShell:
 
-- Terminal.
-- App Installer.
+```powershell
+winget install --id Microsoft.PowerShell -e --source winget
+```
 
 ## Install apps
 
