@@ -114,6 +114,24 @@ Remove-Item $env:USERPROFILE\PowerShellInstall_*.ps1
 
 ## Setup PowerShell
 
+### Add profile
+
+#### Types
+
+- Current User, Current Host - `$PROFILE`
+- Current User, Current Host - `$PROFILE.CurrentUserCurrentHost`
+- Current User, All Hosts - `$PROFILE.CurrentUserAllHosts`
+- All Users, Current Host - `$PROFILE.AllUsersCurrentHost`
+- All Users, All Hosts - `$PROFILE.AllUsersAllHosts`
+
+#### Create profile
+
+```powershell
+if (!(Test-Path -Path $PROFILE)) {
+  New-Item -ItemType File -Path $PROFILE -Force
+}
+```
+
 ### Add custom theme "One Half Dark Edited"
 
 Insert inside brackets into "schemes":
@@ -141,24 +159,6 @@ Insert inside brackets into "schemes":
 	"selectionBackground": "#FFFFFF",
 	"white": "#DCDFE4",
 	"yellow": "#E5E34F"
-}
-```
-
-### Add profile
-
-#### Types
-
-- Current User, Current Host - `$PROFILE`
-- Current User, Current Host - `$PROFILE.CurrentUserCurrentHost`
-- Current User, All Hosts - `$PROFILE.CurrentUserAllHosts`
-- All Users, Current Host - `$PROFILE.AllUsersCurrentHost`
-- All Users, All Hosts - `$PROFILE.AllUsersAllHosts`
-
-#### Create profile
-
-```powershell
-if (!(Test-Path -Path $PROFILE)) {
-  New-Item -ItemType File -Path $PROFILE -Force
 }
 ```
 
