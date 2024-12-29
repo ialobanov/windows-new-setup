@@ -75,7 +75,7 @@ Execute PowerShell script:
 .\PowerShellInstall_Winget_Machine.ps1
 ```
 
-## Enable Hyper-V and WSK
+## Enable Hyper-V and WSL
 
 Run Terminal as Administrator and enable Hyper-V:
 
