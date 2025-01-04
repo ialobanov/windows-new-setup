@@ -132,36 +132,6 @@ if (!(Test-Path -Path $PROFILE)) {
 }
 ```
 
-### Add custom theme "One Half Dark Edited"
-
-Insert inside brackets into "schemes":
-
-```json
-{
-	"background": "#2C2845",
-	"black": "#5E5D5D",
-	"blue": "#61AFEF",
-	"brightBlack": "#757575",
-	"brightBlue": "#61AFEF",
-	"brightCyan": "#56B6C2",
-	"brightGreen": "#98C379",
-	"brightPurple": "#C678DD",
-	"brightRed": "#E06C75",
-	"brightWhite": "#DCDFE4",
-	"brightYellow": "#FFFD58",
-	"cursorColor": "#0CFF93",
-	"cyan": "#56B6C2",
-	"foreground": "#FCFCFC",
-	"green": "#98C379",
-	"name": "One Half Dark Edited",
-	"purple": "#C678DD",
-	"red": "#E06C75",
-	"selectionBackground": "#FFFFFF",
-	"white": "#DCDFE4",
-	"yellow": "#E5E34F"
-}
-```
-
 #### Edit profile
 
 ```powershell
@@ -244,6 +214,36 @@ Set-PSReadLineKeyHandler -Chord 'Ctrl+f' -Function ForwardWord
 Set-PSReadLineKeyHandler -Chord 'Enter' -Function ValidateAndAcceptLine
 ```
 
+### Add custom theme "One Half Dark Edited"
+
+Insert inside brackets into "schemes":
+
+```json
+{
+	"background": "#2C2845",
+	"black": "#5E5D5D",
+	"blue": "#61AFEF",
+	"brightBlack": "#757575",
+	"brightBlue": "#61AFEF",
+	"brightCyan": "#56B6C2",
+	"brightGreen": "#98C379",
+	"brightPurple": "#C678DD",
+	"brightRed": "#E06C75",
+	"brightWhite": "#DCDFE4",
+	"brightYellow": "#FFFD58",
+	"cursorColor": "#0CFF93",
+	"cyan": "#56B6C2",
+	"foreground": "#FCFCFC",
+	"green": "#98C379",
+	"name": "One Half Dark Edited",
+	"purple": "#C678DD",
+	"red": "#E06C75",
+	"selectionBackground": "#FFFFFF",
+	"white": "#DCDFE4",
+	"yellow": "#E5E34F"
+}
+```
+
 ## Install PotPlayer
 
 Direct link:
@@ -255,4 +255,20 @@ Powershell commands:
 ```powershell
 Invoke-WebRequest https://t1.daumcdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetup64.exe -OutFile $env:USERPROFILE\Downloads;
 if ($?) { Start-Process "$env:USERPROFILE\Downloads\PotPlayerSetup64.exe" "powershell" -Verb RunAs };
+```
+
+## Add SSH key-pair
+
+Create:
+
+```powershell
+ssh-keygen -t ed25519 -C "ivan.a.lobanov"
+```
+
+Run SSH-agent and add SSH key-pair into it:
+
+```powershell
+Get-Service -Name ssh-agent | Set-Service -StartupType Automatic;
+if ($?) { Start-Service ssh-agent };
+if ($?) { ssh-add $env:USERPROFILE\.ssh\id_ed25519 };
 ```
