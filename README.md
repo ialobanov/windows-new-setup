@@ -265,7 +265,7 @@ Create SSH key-pair:
 ssh-keygen -t ed25519 -C "ivan.a.lobanov"
 ```
 
-Run SSH-agent and add SSH key-pair into it:
+Run Windows Terminal as Administrator to start SSH-agent and add SSH key-pair into it:
 
 ```powershell
 Get-Service -Name ssh-agent | Set-Service -StartupType Automatic;
