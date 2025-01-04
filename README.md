@@ -259,12 +259,6 @@ if ($?) { Start-Process "$env:USERPROFILE\Downloads\PotPlayerSetup64.exe" "power
 
 ## Add SSH key-pair
 
-Create SSH key-pair:
-
-```powershell
-ssh-keygen -t ed25519 -C "ivan.a.lobanov"
-```
-
 Run Windows Terminal as Administrator to start SSH-Agent:
 
 ```powershell
@@ -272,9 +266,12 @@ Get-Service -Name ssh-agent | Set-Service -StartupType Automatic;
 if ($?) { Start-Service ssh-agent };
 ```
 
-Add SSH key-pair into SSH-Agent. Run Terminal as current User:
+Open Windows Terminal as a current User, create SSH key-pair and add it into SSH-Agent:
+
+```powershell
+ssh-keygen -t ed25519 -C "ivan.a.lobanov"
+```
 
 ```powershell
 ssh-add $env:USERPROFILE\.ssh\id_ed25519
 ```
-
