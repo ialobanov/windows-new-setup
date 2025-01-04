@@ -67,6 +67,7 @@ if ($?) { winget install --id Telegram.TelegramDesktop -e --source winget --scop
 if ($?) { winget install --id Microsoft.VisualStudioCode -e --source winget --scope user };
 if ($?) { winget install --id Obsidian.Obsidian -e --source winget --scope user };
 if ($?) { winget install --id Yandex.Browser -e --source winget --scope user };
+if ($?) { winget install --id 2dust.v2rayN -e --source winget --scope user };
 ```
 
 Execute PowerShell script:
