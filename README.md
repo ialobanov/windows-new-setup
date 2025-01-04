@@ -259,7 +259,7 @@ if ($?) { Start-Process "$env:USERPROFILE\Downloads\PotPlayerSetup64.exe" "power
 
 ## Add SSH key-pair
 
-Create:
+Create SSH key-pair:
 
 ```powershell
 ssh-keygen -t ed25519 -C "ivan.a.lobanov"
