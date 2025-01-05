@@ -78,10 +78,13 @@ Execute PowerShell script:
 
 ## Enable Hyper-V and WSL
 
-Run Terminal as Administrator and enable Hyper-V:
+Run Terminal as Administrator to enable WSL and Hyper-V:
 
 ```powershell
 wsl --install;
+```
+
+```powershell
 if ($?) { Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All };
 ```
 
