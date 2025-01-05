@@ -122,8 +122,7 @@ Remove-Item $env:USERPROFILE\PowerShellInstall_*.ps1
 
 #### Types
 
-- Current User, Current Host - `$PROFILE`
-- Current User, Current Host - `$PROFILE.CurrentUserCurrentHost`
+- Current User, Current Host - `$PROFILE`, `$PROFILE.CurrentUserCurrentHost`
 - Current User, All Hosts - `$PROFILE.CurrentUserAllHosts`
 - All Users, Current Host - `$PROFILE.AllUsersCurrentHost`
 - All Users, All Hosts - `$PROFILE.AllUsersAllHosts`
