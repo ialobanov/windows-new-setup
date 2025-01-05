@@ -85,7 +85,7 @@ wsl --install;
 ```
 
 ```powershell
-if ($?) { Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All };
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
 ```
 
 ## Install PowerShell modules
