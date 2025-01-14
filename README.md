@@ -81,7 +81,7 @@ Execute PowerShell script:
 Run Terminal as Administrator to enable WSL and Hyper-V:
 
 ```powershell
-wsl --install;
+wsl --install
 ```
 
 ```powershell
