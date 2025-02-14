@@ -141,7 +141,7 @@ if (!(Test-Path -Path $PROFILE)) {
 notepad.exe $PROFILE
 ```
 
-```powershell
+```json
 #
 ## Windows PowerShell
 ### PowerShell User Profile
