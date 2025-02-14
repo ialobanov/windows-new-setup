@@ -44,7 +44,7 @@ Run Windows Terminal as Administrator and create list of apps. My current list:
 notepad.exe .\PowerShellInstall_Winget_Machine.ps1
 ```
 
-```powershell
+```ps1
 #
 ## Windows PowerShell
 ### Winget's apps installation 
