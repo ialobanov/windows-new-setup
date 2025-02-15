@@ -194,7 +194,7 @@ Function UpdateAll {
 }
 
 Function GitPush {
-  git.exe add .; if ($?) { git.exe commit -am "." }; if ($?) { git.exe push }; if ($?) { Clear-Host }
+  git.exe add .; if ($?) { git.exe commit -am "Work with repository" }; if ($?) { git.exe push }; if ($?) { Clear-Host }
 }
 
 ### Import-Module
