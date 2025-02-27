@@ -278,3 +278,5 @@ ssh-keygen -t ed25519 -C "ivan.a.lobanov"
 ```powershell
 ssh-add $env:USERPROFILE\.ssh\id_ed25519
 ```
+
+Alternative - use a password manager ssh agent.
