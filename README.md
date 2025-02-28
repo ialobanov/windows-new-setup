@@ -147,8 +147,14 @@ notepad.exe $PROFILE
 ### PowerShell User Profile
 #
 
-### Alias
+### Oh My Posh init
+#oh-my-posh init pwsh --config $env:USERPROFILE\.ohmyposh\zen.toml | Invoke-Expression
 
+### Starship
+$ENV:STARSHIP_CONFIG = "$env:USERPROFILE\starship.toml"
+Invoke-Expression (&starship init powershell)
+
+### Alias
 Set-Alias -Name vim -Value $env:ProgramFiles\Neovim\bin\nvim.exe
 Set-Alias -Name cle -Value Clear-Host
 Set-Alias -Name ll -Value Get-ChildItem
@@ -163,7 +169,6 @@ Set-Alias -Name hosts -Value ChangeHosts
 Set-Alias -Name pubkey -Value SSHPubkey
 
 ### Functions
-
 Function SSHPubkey {
   Get-Content $env:USERPROFILE\.ssh\id_rsa.pub | ssh $(Read-Host -Prompt 'Enter user@ip-address') 'cat >> $HOME/.ssh/authorized_keys'
 }
@@ -198,14 +203,12 @@ Function GitPush {
 }
 
 ### Import-Module
-
 Import-Module -Name PSReadLine
 Import-Module -Name z
 Import-Module -Name Terminal-Icons
 Import-Module -Name posh-git
 
 ### Setup PSReadLineOption
-
 Set-PSReadLineOption -EditMode Emacs
 Set-PSReadLineOption -PredictionSource HistoryAndPlugin
 Set-PSReadLineOption -PredictionViewStyle ListView
