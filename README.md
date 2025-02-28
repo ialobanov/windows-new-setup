@@ -152,6 +152,10 @@ notepad.exe $PROFILE
 
 ### Starship
 $ENV:STARSHIP_CONFIG = "$env:USERPROFILE\starship.toml"
+function Invoke-Starship-PreCommand {
+    $currentFolder = Split-Path -Path $pwd -Leaf
+    $host.ui.RawUI.WindowTitle = "$currentFolder"
+}
 Invoke-Expression (&starship init powershell)
 
 ### Alias
