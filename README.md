@@ -52,16 +52,16 @@ notepad.exe .\PowerShellInstall_Winget_Machine.ps1
 
 winget install --id Git.Git -e --source winget;
 if ($?) { winget install --id Microsoft.VCRedist.2015+.x64 -e --source winget };
-if ($?) { winget install --id Skillbrains.Lightshot -e --source winget };
-if ($?) { winget install --id qBittorrent.qBittorrent -e --source winget };
+if ($?) { winget install --id Skillbrains.Lightshot -e --source winget }; # Screaanshot app
+if ($?) { winget install --id qBittorrent.qBittorrent -e --source winget }; # Bittorrent client
 if ($?) { winget install --id Neovim.Neovim -e --source winget }; # Neovim is a refactor, and sometimes redactor, in the tradition of Vim
-if ($?) { winget install --id 7zip.7zip -e --source winget };
+if ($?) { winget install --id 7zip.7zip -e --source winget }; 
 if ($?) { winget install --id DEVCOM.JetBrainsMonoNerdFont -e --source winget };
 if ($?) { winget install --id Mozilla.Thunderbird -e --source winget };
 if ($?) { winget install --id gerardog.gsudo -e --source winget }; # sudo for Powershell
 if ($?) { winget install --id ALCPU.CoreTemp --source winget }; # Program to monitor processor temperature and other vital information
-if ($?) { winget install --id Mozilla.Firefox --source winget }; #
-if ($?) { winget install --id Bitwarden.Bitwarden -e --source winget --scope user };
+if ($?) { winget install --id Mozilla.Firefox --source winget };
+if ($?) { winget install --id Bitwarden.Bitwarden -e --source winget --scope user }; # Password manager
 if ($?) { winget install --id Telegram.TelegramDesktop -e --source winget --scope user };
 if ($?) { winget install --id Microsoft.VisualStudioCode -e --source winget --scope user };
 if ($?) { winget install --id Obsidian.Obsidian -e --source winget --scope user };
