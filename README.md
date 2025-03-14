@@ -157,21 +157,28 @@ function Invoke-Starship-PreCommand {
 }
 Invoke-Expression (&starship init powershell)
 
+
 ### Alias
 Set-Alias -Name vim -Value $env:ProgramFiles\Neovim\bin\nvim.exe
 Set-Alias -Name cle -Value Clear-Host
 Set-Alias -Name ll -Value Get-ChildItem
 Set-Alias -Name cln -Value CleanTemp 
 Set-Alias -Name touch -Value New-Item
-Set-Alias -Name sudo -Value $env:LOCALAPPDATA\Microsoft\WinGet\Packages\gerardog.gsudo_Microsoft.Winget.Source_8wekyb3d8bbwe\x64\gsudo.exe
-Set-Alias -Name ua -Value UpdateAll
 Set-Alias -Name gst -Value GitStatus
+Set-Alias -Name ua -Value UpdateAll
 Set-Alias -Name gsh -Value GitPush
 Set-Alias -Name gll -Value GitPull
 Set-Alias -Name hosts -Value ChangeHosts
+Set-Alias -Name sudo -Value "C:\Program Files\gsudo\Current\gsudo.exe"
 Set-Alias -Name pubkey -Value SSHPubkey
+Set-Alias -Name g -Value Git.exe
+Set-Alias -Name gshss -Value GitPushSS
 
 ### Functions
+Function GitPushSS {
+  git.exe add .; if ($?) { git.exe commit -am "Work with repository" }; if ($?) { git.exe push }; if ($?) { Clear-Host }
+}
+
 Function SSHPubkey {
   Get-Content $env:USERPROFILE\.ssh\id_rsa.pub | ssh $(Read-Host -Prompt 'Enter user@ip-address') 'cat >> $HOME/.ssh/authorized_keys'
 }
@@ -198,18 +205,18 @@ Function Which ($command) {
 }
 
 Function UpdateAll {
-  winget.exe upgrade --recurse --source winget --verbose
+  sudo winget.exe upgrade --recurse --source winget --verbose --include-unknown --ignore-security-hash
 }
 
 Function GitPush {
   git.exe add .; if ($?) { git.exe commit -am "Work with repository" }; if ($?) { git.exe push }; if ($?) { Clear-Host }
 }
-
+  
 ### Import-Module
 Import-Module -Name PSReadLine
-Import-Module -Name z
-Import-Module -Name Terminal-Icons
-Import-Module -Name posh-git
+Import-Module -Name $env:USERPROFILE\Documents\PowerShell\Modules\z\1.1.13\z.psd1
+Import-Module -Name $env:USERPROFILE\Documents\PowerShell\Modules\Terminal-Icons\0.11.0\Terminal-Icons.psd1
+Import-Module -Name $env:USERPROFILE\Documents\PowerShell\Modules\posh-git\1.1.0\posh-git.psd1
 
 ### Setup PSReadLineOption
 Set-PSReadLineOption -EditMode Emacs
@@ -218,9 +225,9 @@ Set-PSReadLineOption -PredictionViewStyle ListView
 Set-PSReadLineOption -HistoryNoDuplicates:$True
 Set-PSReadLineOption -ShowToolTips:$True
 #Get KeyHandlers 'Get-PSReadLineKeyHandler -Bound -Unbound'
-Set-PSReadlineKeyHandler -Chord 'Ctrl+d' -Function DeleteChar
-Set-PSReadLineKeyHandler -Chord 'Ctrl+f' -Function ForwardWord
-Set-PSReadLineKeyHandler -Chord 'Enter' -Function ValidateAndAcceptLine
+Set-PSReadlineKeyHandler -Chord Ctrl+d -Function DeleteChar
+Set-PSReadLineKeyHandler -Chord Ctrl+f -Function ForwardWord
+Set-PSReadLineKeyHandler -Chord Enter -Function ValidateAndAcceptLine
 ```
 
 ### Add custom theme "One Half Dark Edited"
