@@ -214,9 +214,9 @@ Function GitPush {
   
 ### Import-Module
 Import-Module -Name PSReadLine
-Import-Module -Name $env:USERPROFILE\Documents\PowerShell\Modules\z\1.1.13\z.psd1
-Import-Module -Name $env:USERPROFILE\Documents\PowerShell\Modules\Terminal-Icons\0.11.0\Terminal-Icons.psd1
-Import-Module -Name $env:USERPROFILE\Documents\PowerShell\Modules\posh-git\1.1.0\posh-git.psd1
+Import-Module -Name z
+Import-Module -Name Terminal-Icons
+Import-Module -Name posh-git
 
 ### Setup PSReadLineOption
 Set-PSReadLineOption -EditMode Emacs
