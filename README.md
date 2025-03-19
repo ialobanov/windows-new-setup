@@ -305,4 +305,4 @@ ssh-add $env:USERPROFILE\.ssh\id_ed25519
 ```
 
 > [!TIP]
-> Alternative - use a password manager ssh agent.
+> Alternative - use a password manager's ssh-agent.
