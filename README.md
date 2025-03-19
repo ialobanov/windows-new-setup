@@ -159,13 +159,15 @@ Invoke-Expression (&starship init powershell)
 
 
 ### Alias
-Set-Alias -Name vim -Value $env:ProgramFiles\Neovim\bin\nvim.exe
+Set-Alias -Name vim -Value "$env:ProgramFiles\Neovim\bin\nvim.exe"
 Set-Alias -Name cle -Value Clear-Host
 Set-Alias -Name ll -Value Get-ChildItem
 Set-Alias -Name cln -Value CleanTemp
 Set-Alias -Name touch -Value New-Item
 Set-Alias -Name gst -Value GitStatus
 Set-Alias -Name ua -Value UpdateAll
+Set-Alias -Name winin -Value WingetInstall
+Set-Alias -Name winun -Value WingetUninstall
 Set-Alias -Name gsh -Value GitPush
 Set-Alias -Name gll -Value GitPull
 Set-Alias -Name hosts -Value ChangeHosts
@@ -177,6 +179,14 @@ Set-Alias -Name gshss -Value GitPushSS
 ### Functions
 Function GitPushSS {
   git.exe add .; if ($?) { git.exe commit -am "Work with repository" }; if ($?) { git.exe push }; if ($?) { Clear-Host }
+}
+
+Function WingetInstall {
+  sudo winget install --source winget --id $(Read-Host -Prompt 'Enter Package Name') -e
+}
+
+Function WingetUninstall {
+  sudo winget uninstall --id $(Read-Host -Prompt 'Enter Package Name') -e
 }
 
 Function SSHPubkey {
