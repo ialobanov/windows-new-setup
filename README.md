@@ -169,6 +169,7 @@ Set-Alias -Name gst -Value GitStatus
 Set-Alias -Name ua -Value UpdateAll
 Set-Alias -Name winin -Value WingetInstall
 Set-Alias -Name winun -Value WingetUninstall
+Set-Alias -Name winun -Value WingetSearch
 Set-Alias -Name gsh -Value GitPush
 Set-Alias -Name gll -Value GitPull
 Set-Alias -Name hosts -Value ChangeHosts
@@ -178,16 +179,16 @@ Set-Alias -Name g -Value Git.exe
 Set-Alias -Name gshss -Value GitPushSS
 
 ### Functions
-Function GitPushSS {
-  git.exe add .; if ($?) { git.exe commit -am "Work with repository" }; if ($?) { git.exe push }; if ($?) { Clear-Host }
-}
-
 Function WingetInstall {
   sudo winget install --source winget --id $(Read-Host -Prompt 'Enter Package Name') -e
 }
 
 Function WingetUninstall {
   sudo winget uninstall --id $(Read-Host -Prompt 'Enter Package Name') -e
+}
+
+Function WingetSearch {
+  sudo winget search --id $(Read-Host -Prompt 'Enter Package Name') -e
 }
 
 Function SSHPubkey {
