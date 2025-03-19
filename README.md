@@ -304,4 +304,5 @@ ssh-keygen -t ed25519 -C "ivan.a.lobanov"
 ssh-add $env:USERPROFILE\.ssh\id_ed25519
 ```
 
-[!tip] Alternative - use a password manager ssh agent.
+> [!TIP]
+> Alternative - use a password manager ssh agent.
