@@ -170,7 +170,7 @@ Set-Alias -Name gst -Value GitStatus
 Set-Alias -Name ua -Value UpdateAll
 Set-Alias -Name winin -Value WingetInstall
 Set-Alias -Name winun -Value WingetUninstall
-Set-Alias -Name winun -Value WingetSearch
+Set-Alias -Name winsr -Value WingetSearch
 Set-Alias -Name gsh -Value GitPush
 Set-Alias -Name gll -Value GitPull
 Set-Alias -Name hosts -Value ChangeHosts
