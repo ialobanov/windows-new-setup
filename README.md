@@ -189,7 +189,7 @@ Function WingetUninstall {
 }
 
 Function WingetSearch {
-  sudo winget search --id $(Read-Host -Prompt 'Enter Package Name') -e
+  sudo winget search $(Read-Host -Prompt 'Enter Package Name')
 }
 
 Function SSHPubkey {
