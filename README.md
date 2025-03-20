@@ -272,6 +272,12 @@ Insert inside brackets into "schemes":
 }
 ```
 
+Restart Terminal and execute the command:
+
+```powershell
+sudo winget settings --enable InstallerHashOverride
+```
+
 ## Install Brave Browser
 
 ```powershell
