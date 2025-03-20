@@ -87,6 +87,12 @@ wsl --install
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
 ```
 
+After reboot install OS Linux into WSL:
+
+```powershell
+wsl --install
+```
+
 ## Install PowerShell modules
 
 ```powershell
