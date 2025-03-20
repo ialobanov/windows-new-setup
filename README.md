@@ -60,6 +60,7 @@ if ($?) { winget install --id Mozilla.Firefox --source winget };
 if ($?) { winget install --id Yandex.Browser -e --source winget };
 if ($?) { winget install --id 7zip.7zip -e --source winget };
 if ($?) { winget install --id wez.wezterm -e --source winget };
+if ($?) { winget install --id Starship.Starship -e --source winget };
 if ($?) { winget install --id DEVCOM.JetBrainsMonoNerdFont -e --source winget };
 if ($?) { winget install --id Mozilla.Thunderbird -e --source winget };
 if ($?) { winget install --id gerardog.gsudo -e --source winget }; # sudo for Powershell
