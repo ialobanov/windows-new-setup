@@ -237,7 +237,6 @@ Import-Module -Name Terminal-Icons
 Import-Module -Name posh-git
 
 ### Setup PSReadLineOption
-Set-PSReadLineOption -EditMode Emacs
 Set-PSReadLineOption -PredictionSource HistoryAndPlugin
 Set-PSReadLineOption -PredictionViewStyle ListView
 Set-PSReadLineOption -HistoryNoDuplicates:$True
