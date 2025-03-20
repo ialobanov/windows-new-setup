@@ -276,6 +276,7 @@ Insert inside brackets into "schemes":
 
 ```powershell
 Invoke-WebRequest https://laptop-updates.brave.com/latest/winx64 -OutFile $env:USERPROFILE\Downloads; if ($?) { Start-Process "$env:USERPROFILE\Downloads\BraveBrowserSetup.exe" };
+```
 
 ## Install PotPlayer
 
