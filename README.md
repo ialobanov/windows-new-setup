@@ -153,9 +153,6 @@ notepad.exe $PROFILE
 ### PowerShell User Profile
 #
 
-### Oh My Posh init
-#oh-my-posh init pwsh --config $env:USERPROFILE\.ohmyposh\zen.toml | Invoke-Expression
-
 ### Starship
 $ENV:STARSHIP_CONFIG = "$env:USERPROFILE\starship.toml"
 function Invoke-Starship-PreCommand {
