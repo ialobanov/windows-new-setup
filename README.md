@@ -244,6 +244,15 @@ Set-PSReadLineKeyHandler -Chord Ctrl+f -Function ForwardWord
 Set-PSReadLineKeyHandler -Chord Enter -Function ValidateAndAcceptLine
 ```
 
+> [!WARNING] Attention!
+> Do it before use winget upgrade alias.
+
+Restart Terminal and execute the command:
+
+```powershell
+sudo winget settings --enable InstallerHashOverride
+```
+
 ### Add custom theme "One Half Dark Edited"
 
 Insert inside brackets into "schemes":
@@ -272,12 +281,6 @@ Insert inside brackets into "schemes":
 	"white": "#DCDFE4",
 	"yellow": "#E5E34F"
 }
-```
-
-Restart Terminal and execute the command:
-
-```powershell
-sudo winget settings --enable InstallerHashOverride
 ```
 
 ## Install Brave Browser
