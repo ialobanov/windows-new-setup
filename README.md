@@ -245,7 +245,7 @@ Set-PSReadLineKeyHandler -Chord Enter -Function ValidateAndAcceptLine
 ```
 
 > [!IMPORTANT]
-> Do it before use winget upgrade alias.
+> Do the command below before use winget upgrade alias.
 
 Restart Terminal and execute the command:
 
