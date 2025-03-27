@@ -59,7 +59,6 @@ if ($?) { winget install --id Neovim.Neovim -e --source winget }; # Neovim is a 
 if ($?) { winget install --id Mozilla.Firefox --source winget };
 if ($?) { winget install --id Yandex.Browser -e --source winget };
 if ($?) { winget install --id 7zip.7zip -e --source winget };
-if ($?) { winget install --id wez.wezterm -e --source winget };
 if ($?) { winget install --id Starship.Starship -e --source winget };
 if ($?) { winget install --id DEVCOM.JetBrainsMonoNerdFont -e --source winget };
 if ($?) { winget install --id Mozilla.Thunderbird -e --source winget };
@@ -252,36 +251,6 @@ Restart Terminal and execute the command:
 
 ```powershell
 sudo winget settings --enable InstallerHashOverride
-```
-
-### Add custom theme "One Half Dark Edited"
-
-Insert inside brackets into "schemes":
-
-```json
-{
-	"background": "#2C2845",
-	"black": "#5E5D5D",
-	"blue": "#61AFEF",
-	"brightBlack": "#757575",
-	"brightBlue": "#61AFEF",
-	"brightCyan": "#56B6C2",
-	"brightGreen": "#98C379",
-	"brightPurple": "#C678DD",
-	"brightRed": "#E06C75",
-	"brightWhite": "#DCDFE4",
-	"brightYellow": "#FFFD58",
-	"cursorColor": "#0CFF93",
-	"cyan": "#56B6C2",
-	"foreground": "#FCFCFC",
-	"green": "#98C379",
-	"name": "One Half Dark Edited",
-	"purple": "#C678DD",
-	"red": "#E06C75",
-	"selectionBackground": "#FFFFFF",
-	"white": "#DCDFE4",
-	"yellow": "#E5E34F"
-}
 ```
 
 ## Install Brave Browser
