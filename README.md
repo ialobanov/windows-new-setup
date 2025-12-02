@@ -57,6 +57,8 @@ if ($?) { winget install --id Skillbrains.Lightshot -e --source winget }; # Scre
 if ($?) { winget install --id qBittorrent.qBittorrent -e --source winget }; # Bittorrent client
 if ($?) { winget install --id Neovim.Neovim -e --source winget }; # Neovim is a refactor, and sometimes redactor, in the tradition of Vim
 if ($?) { winget install --id 7zip.7zip -e --source winget };
+if ($?) { winget install --id Mozilla.Firefox -e --source winget };
+if ($?) { winget install --id Yandex.Browser -e --source winget };
 if ($?) { winget install --id ALCPU.CoreTemp -e --source winget };
 if ($?) { winget install --id Starship.Starship -e --source winget };
 if ($?) { winget install --id DEVCOM.JetBrainsMonoNerdFont -e --source winget };
