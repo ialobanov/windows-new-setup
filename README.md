@@ -46,11 +46,6 @@ notepad.exe .\PowerShellInstall_Winget_Machine.ps1
 ```
 
 ```ps1
-#
-## Windows PowerShell
-### Winget's apps installation 
-#
-
 winget install --id Git.Git -e --source winget;
 if ($?) { winget install --id Microsoft.VCRedist.2015+.x64 -e --source winget };
 if ($?) { winget install --id Skillbrains.Lightshot -e --source winget }; # Screaanshot app
@@ -60,6 +55,11 @@ if ($?) { winget install --id 7zip.7zip -e --source winget };
 if ($?) { winget install --id Mozilla.Firefox -e --source winget };
 if ($?) { winget install --id Yandex.Browser -e --source winget };
 if ($?) { winget install --id ALCPU.CoreTemp -e --source winget };
+```
+
+**Reboot**
+
+```ps1
 if ($?) { winget install --id Starship.Starship -e --source winget };
 if ($?) { winget install --id DEVCOM.JetBrainsMonoNerdFont -e --source winget };
 if ($?) { winget install --id Mozilla.Thunderbird -e --source winget };
