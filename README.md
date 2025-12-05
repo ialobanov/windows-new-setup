@@ -60,7 +60,7 @@ if ($?) { winget install --id ALCPU.CoreTemp -e --source winget };
 **Reboot**
 
 ```ps1
-if ($?) { winget install --id Starship.Starship -e --source winget };
+winget install --id Starship.Starship -e --source winget;
 if ($?) { winget install --id DEVCOM.JetBrainsMonoNerdFont -e --source winget };
 if ($?) { winget install --id Mozilla.Thunderbird -e --source winget };
 if ($?) { winget install --id gerardog.gsudo -e --source winget }; # sudo for Powershell
