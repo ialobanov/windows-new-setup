@@ -312,7 +312,7 @@ vim $env:USERPROFILE\.gitconfig
 git config --list --global
 ```
 
-## Work
+### Work
 
 ```shell
 vim $env:USERPROFILE\.gitconfig-work
@@ -322,6 +322,15 @@ vim $env:USERPROFILE\.gitconfig-work
 [user]
     name = Ivan Lobanov
     email = ivan.lobanov@solidlab.ru
+```
+## Obsidian vaults
+
+```shell
+mkdir $HOME/vault-personal && mkdir -p $HOME/solidsoft/vault-solidsoft
+```
+
+```shell
+git clone git@github.com:ialobanov/obsidian-vault.git $HOME/vault-personal
 ```
 
 ## Add SSH key-pair
