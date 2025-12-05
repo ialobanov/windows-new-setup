@@ -272,6 +272,58 @@ Powershell commands:
 Invoke-WebRequest https://t1.daumcdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetup64.exe -OutFile $env:USERPROFILE\Downloads; if ($?) { Start-Process "$env:USERPROFILE\Downloads\PotPlayerSetup64.exe" "powershell" -Verb RunAs };
 ```
 
+## Git configuration
+
+```powershell
+vim $env:USERPROFILE\.gitconfig
+```
+
+```properties
+[user]
+  name = ialobanov
+  email = ivan.a.lobanov@gmail.com
+
+[core]
+  autocrlf = input # unix
+  editor = nvim
+  sshCommand = C:/Windows/System32/OpenSSH/ssh.exe # for windows
+
+[alias]
+  che = checkout
+  cm = commit
+  br = branch
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  last = log -1 HEAD
+
+[init]
+  defaultBranch = main
+
+[pull]
+  rebase = true
+
+[fetch]
+  prune = true
+
+[includeIf "gitdir:C:/Users/Ivan/solidsoft/"]
+  path = C:/Users/Ivan/.gitconfig-work
+```
+
+```shell
+git config --list --global
+```
+
+## Work
+
+```shell
+vim $env:USERPROFILE\.gitconfig-work
+```
+
+```properties
+[user]
+    name = Ivan Lobanov
+    email = ivan.lobanov@solidlab.ru
+```
+
 ## Add SSH key-pair
 
 Run Windows Terminal as Administrator to start SSH-Agent:
