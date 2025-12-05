@@ -325,12 +325,12 @@ vim $env:USERPROFILE\.gitconfig-work
 ```
 ## Obsidian vaults
 
-```shell
-mkdir $HOME/vault-personal && mkdir -p $HOME/solidsoft/vault-solidsoft
+```ps1
+mkdir $env:USERPROFILE\vault-personal && mkdir -p $env:USERPROFILE\solidsoft\vault-solidsoft
 ```
 
-```shell
-git clone git@github.com:ialobanov/obsidian-vault.git $HOME/vault-personal
+```ps1
+git clone git@github.com:ialobanov/obsidian-vault.git $env:USERPROFILE\vault-personal
 ```
 
 ## Add SSH key-pair
