@@ -158,35 +158,27 @@ Import-Module -Name posh-git
 Function WingetInstall {
   sudo winget install --source winget --id $(Read-Host -Prompt 'Enter Package Name') -e
 }
-
 Function WingetUninstall {
   sudo winget uninstall --id $(Read-Host -Prompt 'Enter Package Name') -e
 }
-
 Function WingetSearch {
   winget search $(Read-Host -Prompt 'Enter Package Name')
 }
-
 Function SSHPubkey {
   Get-Content $env:USERPROFILE\.ssh\id_rsa.pub | ssh $(Read-Host -Prompt 'Enter user@ip-address') 'cat >> $HOME/.ssh/authorized_keys'
 }
-
 Function ChangeHosts {
   sudo nvim $env:SystemRoot\System32\drivers\etc\hosts
 }
-
 Function GitPull {
   git.exe pull; if ($?) { Clear-Host }
 }
-
 Function GitStatus {
   git.exe status
 }
-
 Function CleanTemp {
   Remove-Item -Path $env:TEMP\* -Recurse -ErrorAction SilentlyContinue
 }
-
 Function Which ($command) {
   Get-Command -Name $command -ErrorAction SilentlyContinue |
   Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
