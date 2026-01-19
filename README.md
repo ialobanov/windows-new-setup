@@ -148,40 +148,13 @@ notepad.exe $PROFILE
 ```
 
 ```ps1
-#
-## Windows PowerShell
-### PowerShell User Profile
-#
+# import ps modules
+Import-Module -Name PSReadLine
+Import-Module -Name z
+Import-Module -Name Terminal-Icons
+Import-Module -Name posh-git
 
-### Starship
-$ENV:STARSHIP_CONFIG = "$env:USERPROFILE\starship.toml"
-function Invoke-Starship-PreCommand {
-  $starship_title = Split-Path -Path $pwd -Leaf
-  $host.ui.RawUI.WindowTitle = "$starship_title"
-}
-Invoke-Expression (&starship init powershell)
-
-
-### Alias
-Set-Alias -Name vim -Value "$env:ProgramFiles\Neovim\bin\nvim.exe"
-Set-Alias -Name cle -Value Clear-Host
-Set-Alias -Name ll -Value Get-ChildItem
-Set-Alias -Name cln -Value CleanTemp
-Set-Alias -Name touch -Value New-Item
-Set-Alias -Name gst -Value GitStatus
-Set-Alias -Name ua -Value UpdateAll
-Set-Alias -Name winin -Value WingetInstall
-Set-Alias -Name winun -Value WingetUninstall
-Set-Alias -Name winsr -Value WingetSearch
-Set-Alias -Name gsh -Value GitPush
-Set-Alias -Name gll -Value GitPull
-Set-Alias -Name hosts -Value ChangeHosts
-Set-Alias -Name sudo -Value "C:\Program Files\gsudo\Current\gsudo.exe"
-Set-Alias -Name pubkey -Value SSHPubkey
-Set-Alias -Name g -Value Git.exe
-Set-Alias -Name gshss -Value GitPushSS
-
-### Functions
+# functions
 Function WingetInstall {
   sudo winget install --source winget --id $(Read-Host -Prompt 'Enter Package Name') -e
 }
@@ -227,13 +200,7 @@ Function GitPush {
   git.exe add .; if ($?) { git.exe commit -am "Work with repository" }; if ($?) { git.exe push }; if ($?) { Clear-Host }
 }
   
-### Import-Module
-Import-Module -Name PSReadLine
-Import-Module -Name z
-Import-Module -Name Terminal-Icons
-Import-Module -Name posh-git
-
-### Setup PSReadLineOption
+# setup PSReadLineOption
 Set-PSReadLineOption -EditMode Emacs
 Set-PSReadLineOption -PredictionSource HistoryAndPlugin
 Set-PSReadLineOption -PredictionViewStyle ListView
@@ -243,6 +210,33 @@ Set-PSReadLineOption -ShowToolTips:$True
 Set-PSReadlineKeyHandler -Chord Ctrl+d -Function DeleteChar
 Set-PSReadLineKeyHandler -Chord Ctrl+f -Function ForwardWord
 Set-PSReadLineKeyHandler -Chord Enter -Function ValidateAndAcceptLine
+
+# alias
+Set-Alias -Name vim -Value "$env:ProgramFiles\Neovim\bin\nvim.exe"
+Set-Alias -Name cle -Value Clear-Host
+Set-Alias -Name ll -Value Get-ChildItem
+Set-Alias -Name cln -Value CleanTemp
+Set-Alias -Name touch -Value New-Item
+Set-Alias -Name gst -Value GitStatus
+Set-Alias -Name ua -Value UpdateAll
+Set-Alias -Name winin -Value WingetInstall
+Set-Alias -Name winun -Value WingetUninstall
+Set-Alias -Name winsr -Value WingetSearch
+Set-Alias -Name gsh -Value GitPush
+Set-Alias -Name gll -Value GitPull
+Set-Alias -Name hosts -Value ChangeHosts
+Set-Alias -Name sudo -Value "C:\Program Files\gsudo\Current\gsudo.exe"
+Set-Alias -Name pubkey -Value SSHPubkey
+Set-Alias -Name g -Value Git.exe
+Set-Alias -Name gshss -Value GitPushSS
+
+# starship
+$ENV:STARSHIP_CONFIG = "$env:USERPROFILE\starship.toml"
+function Invoke-Starship-PreCommand {
+  $starship_title = Split-Path -Path $pwd -Leaf
+  $host.ui.RawUI.WindowTitle = "$starship_title"
+}
+Invoke-Expression (&starship init powershell)
 ```
 
 > [!IMPORTANT]
