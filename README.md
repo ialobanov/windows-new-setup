@@ -119,16 +119,14 @@ Remove-Item $env:USERPROFILE\PowerShellInstall_*.ps1
 - All Users, Current Host - `$PROFILE.AllUsersCurrentHost`
 - All Users, All Hosts - `$PROFILE.AllUsersAllHosts`
 
-#### Create profile
-
+1. Create profile:
 ```powershell
 if (!(Test-Path -Path $PROFILE)) {
   New-Item -ItemType File -Path $PROFILE -Force
 }
 ```
 
-#### Edit profile
-
+2. Edit profile:
 ```powershell
 notepad.exe $PROFILE
 ```
@@ -220,7 +218,7 @@ Invoke-Expression (&starship init powershell)
 > [!IMPORTANT]
 > Do the command below before use winget upgrade alias.
 
-Restart Terminal and execute the command:
+3. Restart Terminal and execute the command:
 ```powershell
 sudo winget settings --enable InstallerHashOverride
 ```
