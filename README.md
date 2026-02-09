@@ -309,7 +309,7 @@ vim $env:USERPROFILE\.gitconfig-work
     name = Ivan Lobanov
     email = ivan.lobanov@solidlab.ru
 ```
-## Obsidian vaults
+## Obsidian vault
 
 ```ps1
 mkdir $env:USERPROFILE\vault-personal && mkdir -p $env:USERPROFILE\solidsoft\vault-solidsoft
