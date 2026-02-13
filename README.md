@@ -183,7 +183,7 @@ Set-PSReadLineOption -PredictionViewStyle ListView
 Set-PSReadLineOption -HistoryNoDuplicates:$True
 Set-PSReadLineOption -ShowToolTips:$True
 #Get KeyHandlers 'Get-PSReadLineKeyHandler -Bound -Unbound'
-Set-PSReadlineKeyHandler -Chord Ctrl+d -Function DeleteChar
+Set-PSReadLineKeyHandler -Chord Ctrl+d -Function DeleteChar
 Set-PSReadLineKeyHandler -Chord Ctrl+f -Function ForwardWord
 Set-PSReadLineKeyHandler -Chord Enter -Function ValidateAndAcceptLine
 
