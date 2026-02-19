@@ -223,12 +223,6 @@ Invoke-Expression (&starship init powershell)
 sudo winget settings --enable InstallerHashOverride
 ```
 
-## Install Brave Browser
-
-```powershell
-Invoke-WebRequest https://laptop-updates.brave.com/latest/winx64 -OutFile $env:USERPROFILE\Downloads; if ($?) { Start-Process "$env:USERPROFILE\Downloads\BraveBrowserSetup.exe" };
-```
-
 ## Install PotPlayer
 
 Direct link:
@@ -240,77 +234,3 @@ Powershell commands:
 ```powershell
 Invoke-WebRequest https://t1.daumcdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetup64.exe -OutFile $env:USERPROFILE\Downloads; if ($?) { Start-Process "$env:USERPROFILE\Downloads\PotPlayerSetup64.exe" "powershell" -Verb RunAs };
 ```
-
-## Git configuration
-
-```powershell
-vim $env:USERPROFILE\.gitconfig
-```
-
-```properties
-[user]
-  name = ialobanov
-  email = ivan.a.lobanov@gmail.com
-
-[core]
-  autocrlf = input # unix
-  editor = nvim
-  sshCommand = C:/Windows/System32/OpenSSH/ssh.exe # for windows
-
-[alias]
-  che = checkout
-  cm = commit
-  br = branch
-  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-  last = log -1 HEAD
-
-[init]
-  defaultBranch = main
-
-[pull]
-  rebase = true
-
-[fetch]
-  prune = true
-
-[includeIf "gitdir:C:/Users/Ivan/solidsoft/"]
-  path = C:/Users/Ivan/.gitconfig-work
-```
-
-```shell
-git config --list --global
-```
-
-## Obsidian vault
-
-1. Create directory:
-```ps1
-mkdir $env:USERPROFILE\vault-personal && mkdir -p $env:USERPROFILE\solidsoft\vault-solidsoft
-```
-
-2. Clone the repo:
-```ps1
-git clone git@github.com:ialobanov/obsidian-vault.git $env:USERPROFILE\vault-personal
-```
-
-## Add SSH key-pair
-
-> [!TIP]
-> Alternative - use a password manager's ssh-agent.
-
-1. Run windows terminal as administrator to start ssh-Agent:
-```powershell
-Get-Service -Name ssh-agent | Set-Service -StartupType Automatic;
-if ($?) { Start-Service ssh-agent };
-```
-
-2. Open windows terminal as a current user, create ssh key-pair and add it into ssh-Agent:
-```powershell
-ssh-keygen -t ed25519 -C "ivan.a.lobanov"
-```
-
-3. Add ssh-key to your profile:
-```powershell
-ssh-add $env:USERPROFILE\.ssh\id_ed25519
-```
-
