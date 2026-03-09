@@ -183,6 +183,10 @@ Set-PSReadLineOption -PredictionViewStyle ListView
 Set-PSReadLineOption -HistoryNoDuplicates:$True
 Set-PSReadLineOption -ShowToolTips:$True
 #Get KeyHandlers 'Get-PSReadLineKeyHandler -Bound -Unbound'
+Set-PSReadLineKeyHandler -Key F1 -ScriptBlock {
+    [Console]::Write("`e[H`e[2J`e[3J")
+    [Microsoft.PowerShell.PSConsoleReadLine]::AcceptLine()
+}
 Set-PSReadLineKeyHandler -Chord Ctrl+d -Function DeleteChar
 Set-PSReadLineKeyHandler -Chord Ctrl+f -Function ForwardWord
 Set-PSReadLineKeyHandler -Chord Enter -Function ValidateAndAcceptLine
