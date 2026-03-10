@@ -193,6 +193,7 @@ Set-PSReadLineKeyHandler -Chord Enter -Function ValidateAndAcceptLine
 
 # aliases
 Set-Alias -Name vim -Value "$env:ProgramFiles\Neovim\bin\nvim.exe"
+Set-Alias -Name v -Value "$env:ProgramFiles\Neovim\bin\nvim.exe"
 Set-Alias -Name cle -Value Clear-Host
 Set-Alias -Name ll -Value Get-ChildItem
 Set-Alias -Name cln -Value CleanTemp
