@@ -24,7 +24,7 @@ winget install --id Microsoft.PowerShell -e --source winget
 notepad.exe .\PowerShellInstall_Winget_Machine.ps1
 ```
 
-2. Add apps for your need, here my list of choice:
+2. Add apps to your needs, here is my list of apps:
 
 ```ps1
 winget install --id Git.Git -e --source winget;
@@ -74,7 +74,7 @@ wsl --install
 notepad.exe .\PowerShellInstall_Modules.ps1
 ```
 
-2. Add modules for your need, here my list of choice:
+2. Add modules to your needs, here is my list of modules:
 
 ```powershell
 Install-Module -Name posh-git -Scope CurrentUser;
@@ -122,7 +122,7 @@ if (!(Test-Path -Path $PROFILE)) {
 notepad.exe $PROFILE
 ```
 
-3. Add settings for your need, here my personal configuration:
+3. Customize settings to your needs, here is my personal configuration:
 
 ```ps1
 # import ps modules
