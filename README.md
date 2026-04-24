@@ -95,16 +95,18 @@ if ($?) { Install-Module -Name Terminal-Icons -Scope CurrentUser };
 Remove-Item $env:USERPROFILE\PowerShellInstall_*.ps1
 ```
 
-## Setup PowerShell
+## Set up PowerShell
 
 ### Create profile
 
-#### Types
 
-- Current User, Current Host - `$PROFILE`, `$PROFILE.CurrentUserCurrentHost`
-- Current User, All Hosts - `$PROFILE.CurrentUserAllHosts`
-- All Users, Current Host - `$PROFILE.AllUsersCurrentHost`
-- All Users, All Hosts - `$PROFILE.AllUsersAllHosts`
+|   Type  |  Name   |
+| --- | --- |
+| Current User, Current Host |  `$PROFILE`, `$PROFILE.CurrentUserCurrentHost` |
+| Current User, All Hosts |  `$PROFILE.CurrentUserAllHosts` |
+| All Users, Current Host |  `$PROFILE.AllUsersCurrentHost` |
+| All Users, All Hosts |  `$PROFILE.AllUsersAllHosts` |
+
 
 1. Create profile for `Current User, Current Host`:
 
