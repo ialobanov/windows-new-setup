@@ -68,13 +68,13 @@ wsl --install
 
 ## Install PowerShell's modules
 
-1. Run Windows Terminal and create a list of extensions:
+1. Run Windows Terminal and create a list of modules:
 
 ```powershell
 notepad.exe .\PowerShellInstall_Modules.ps1
 ```
 
-2. Add extensions for your need, here my list of choice:
+2. Add modules for your need, here my list of choice:
 
 ```powershell
 Install-Module -Name posh-git -Scope CurrentUser;
@@ -83,7 +83,7 @@ if ($?) { Install-Module -Name PSReadLine -Scope CurrentUser };
 if ($?) { Install-Module -Name Terminal-Icons -Scope CurrentUser };
 ```
 
-3. Install listed extensions:
+3. Install listed modules:
 
 ```powershell
 .\PowerShellInstall_Modules.ps1
