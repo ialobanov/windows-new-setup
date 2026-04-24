@@ -226,7 +226,7 @@ sudo winget settings --enable InstallerHashOverride
 
 ## Install PotPlayer (optinal)
 
-> [!INFO]
+> [!NOTE]
 > This is my choice of video player for Windows.
 > Follow your personal references!
 
