@@ -18,7 +18,7 @@ winget install --id Microsoft.PowerShell -e --source winget
 
 ## Install apps
 
-1. Run Windows Terminal as Administrator and create list of apps:
+1. Run Windows Terminal as Administrator and create a list of apps:
 
 ```powershell
 notepad.exe .\PowerShellInstall_Winget_Machine.ps1
@@ -68,7 +68,7 @@ wsl --install
 
 ## Install PowerShell's modules
 
-1. Run Windows Terminal and create list of extensions:
+1. Run Windows Terminal and create a list of extensions:
 
 ```powershell
 notepad.exe .\PowerShellInstall_Modules.ps1
