@@ -122,7 +122,7 @@ if (!(Test-Path -Path $PROFILE)) {
 notepad.exe $PROFILE
 ```
 
-3. Add settings for your need, here my list of choice:
+3. Add settings for your need, here my personal configuration:
 
 ```ps1
 # import ps modules
