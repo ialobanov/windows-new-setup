@@ -230,7 +230,7 @@ sudo winget settings --enable InstallerHashOverride
 > This is my choice of video player for Windows.
 > Follow your personal references!
 
-Use the [direct link](https://t1.daumcdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetup64.exe) or Powershell command for instalaltion:
+Use the [direct link](https://t1.daumcdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetup64.exe) or Powershell command for installation:
 
 ```powershell
 Invoke-WebRequest https://t1.daumcdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetup64.exe -OutFile $env:USERPROFILE\Downloads; if ($?) { Start-Process "$env:USERPROFILE\Downloads\PotPlayerSetup64.exe" "powershell" -Verb RunAs };
