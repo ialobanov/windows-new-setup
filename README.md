@@ -14,7 +14,7 @@ winget update --id Microsoft.WindowsTerminal -e --accept-source-agreements --sou
 winget install --id Microsoft.PowerShell -e --source winget
 ```
 
-3. Restart Terminal again and setup default profile as `powershell`.
+3. Restart Terminal again and setup `PowerShell` as default profile in Terminal's settings.
 
 ## Install apps
 
