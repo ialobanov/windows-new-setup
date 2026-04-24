@@ -8,7 +8,7 @@
 winget update --id Microsoft.WindowsTerminal -e --accept-source-agreements --source winget; if ($?) { winget update --id Microsoft.AppInstaller -e --source winget };
 ```
 
-2. Restart Windows Terminal and install Microsoft opensource PowerShell:
+2. Restart Windows Terminal and install PowerShell:
 
 ```powershell
 winget install --id Microsoft.PowerShell -e --source winget
