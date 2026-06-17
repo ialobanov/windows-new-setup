@@ -37,6 +37,7 @@ if ($?) { winget install --id DEVCOM.JetBrainsMonoNerdFont -e --source winget };
 if ($?) { winget install --id Mozilla.Thunderbird -e --source winget };
 if ($?) { winget install --id gerardog.gsudo -e --source winget };
 if ($?) { winget install --id Bitwarden.Bitwarden -e --source winget };
+if ($?) { winget install --id Starship.Starship -e --source winget };
 if ($?) { winget install --id Telegram.TelegramDesktop -e --source winget };
 if ($?) { winget install --id Microsoft.VisualStudioCode -e --source winget };
 if ($?) { winget install --id Obsidian.Obsidian -e --source winget };
