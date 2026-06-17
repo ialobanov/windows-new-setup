@@ -30,6 +30,7 @@ notepad.exe .\PowerShellInstall_Winget_Machine.ps1
 winget install --id Git.Git -e --source winget;
 if ($?) { winget install --id Microsoft.VCRedist.2015+.x64 -e --source winget };
 if ($?) { winget install --id Skillbrains.Lightshot -e --source winget };
+if ($?) { winget install --id Google.Chrome -e --source winget };
 if ($?) { winget install --id qBittorrent.qBittorrent -e --source winget };
 if ($?) { winget install --id Neovim.Neovim -e --source winget };
 if ($?) { winget install --id 7zip.7zip -e --source winget };
